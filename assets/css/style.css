@@ -198,19 +198,24 @@ ul, li {
 
 .projects-blur {
     position: relative;
-  /* projects-blur:hover .projects__name */
 }
 
-.projects-blur img {
-    filter: blur(0px);
-}
-
-.projects-blur img:hover {
+.projects-blur:hover {
     filter: blur(5px);
 }
 
-.projects-blur:hover .projects__name {
+.projects-blur:hover {
+    position: relative;
+  /* projects-blur:hover .projects__name */
+}
+
+.projects-blur:hover:hover {
+    filter: blur(5px);
+}
+
+.projects-blur:hover:hover .projects__name {
     color: rgb(255, 255, 255);
+    z-index: 5;
 }
 
 .footer {
