@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(./../fonts/Raleway-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+  src: url(./../fonts/Raleway-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+  src: url(./../fonts/Raleway-SemiBold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+  src: url(./../fonts/Raleway-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+  src: url(./../fonts/Raleway-ExtraBold.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "CenturyGothic";
+  src: url(./../fonts/CenturyGothic.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "CenturyGothic";
+  src: url(./../fonts/CenturyGothic-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Dongle";
+  src: url(./../fonts/Dongle-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "RadioCanada";
+  src: url(./../fonts/RadioCanada-SemiBold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+    --font-family: "Relawey", sans-serif;
+    --container-big: 1920px;
+    --container-width: 1620px;
+    --container-offset: 15px;
+    --container-standart: calc(var(--container-width) + (var(--container-offset) * 2));
+    --standart-text-color: #000;
+    --bg-color: #F4F3F3;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--standart-text-color);
+}
+
+a {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+article {
+    display: inline-block;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-standart);
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-big {
+    max-width: var(--container-big);
+    margin: 0 auto;
+}
+
+.header {
+    padding: 17px 0;
+    background-color: var(--bg-color);
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 45px;
+    column-gap: 45px;
+}
+
+.nav__link {
+    font-family: "CenturyGothic";
+    font-size: 14px;
+    line-height: 1.214;
+    color: var(--standart-text-color);
+}
+
+.button {
+    padding: 19px 35px;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 0px;
+    letter-spacing: 0.02em;
+    font-family: "CenturyGothic";
+    background-color: var(--bg-color);
+    border: 1px solid var(--standart-text-color);
+    border-radius: 20px;
+}
+
+.projects {
+    background-color: var(--bg-color);
+}
+
+.projects__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.projects__two-row {
+    display: flex;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+}
+
+.projects__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "CenturyGothic";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    z-index: 2;
+}
+
+.projects-blur {
+    position: relative;
+  /* projects-blur:hover .projects__name */
+}
+
+.projects-blur img {
+    filter: blur(0px);
+}
+
+.projects-blur img:hover {
+    filter: blur(5px);
+}
+
+.projects-blur:hover .projects__name {
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    background-color: var(--bg-color);
+}
