@@ -193,27 +193,20 @@ ul, li {
     line-height: 1.25;
     color: rgba(255, 255, 255, 0);
     text-align: center;
-    z-index: 2;
+    z-index: 5;
 }
 
 .projects-blur {
     position: relative;
+    z-index: 1;
+    filter: blur(0);
 }
 
 .projects-blur:hover {
     filter: blur(5px);
 }
 
-.projects-blur:hover {
-    position: relative;
-  /* projects-blur:hover .projects__name */
-}
-
-.projects-blur:hover:hover {
-    filter: blur(5px);
-}
-
-.projects-blur:hover:hover .projects__name {
+.projects-blur:hover .projects__name {
     color: rgb(255, 255, 255);
     z-index: 5;
 }
