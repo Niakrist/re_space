@@ -68,6 +68,8 @@
     --container-offset: 15px;
     --container-standart: calc(var(--container-width) + (var(--container-offset) * 2));
     --standart-text-color: #000;
+    --alternative-text-color: #828282;
+    --accent-text-color: #717171;
     --bg-color: #F4F3F3;
 }
 
@@ -104,10 +106,23 @@ article {
     display: inline-block;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
 ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.none {
+    display: none;
+}
+
+.rotate-img {
+    transform: rotate(180deg);
 }
 
 .container {
@@ -119,6 +134,12 @@ ul, li {
 .container-big {
     max-width: var(--container-big);
     margin: 0 auto;
+}
+
+.line {
+    max-width: 1620px;
+    height: 1px;
+    border: 1px solid #9C9C9C;
 }
 
 .header {
@@ -238,13 +259,199 @@ ul, li {
     color: rgb(255, 255, 255);
 }
 
+.price {
+    font-family: "Raleway";
+    background-color: var(--bg-color);
+}
+
+.price__title {
+    padding-top: 37px;
+    margin-bottom: 60px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.166;
+    color: var(--standart-text-color);
+}
+
+.price__item {
+    padding: 24px 0 38px;
+}
+
+.price__header {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.price__header-name {
+    width: 60%;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.16;
+    color: var(--standart-text-color);
+}
+
+.price__header-private {
+    width: 20%;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.16;
+    color: var(--alternative-text-color);
+}
+
+.price__header-public {
+    width: 20%;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.16;
+    color: var(--alternative-text-color);
+}
+
+.price__elems {
+    padding-bottom: 5px;
+    display: flex;
+}
+
+.price__elems-name {
+    width: 60%;
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--standart-text-color);
+}
+
+.price__elems-private {
+    width: 20%;
+    font-family: "Century Gothic";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.25;
+    color: var(--alternative-text-color);
+}
+
+.price__elems-public {
+    width: 20%;
+    font-family: "Century Gothic";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.25;
+    color: var(--alternative-text-color);
+}
+
+.price__elems-name-text {
+    margin-top: 15px;
+}
+
+.price__ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.price__li {
+    font-size: 16px;
+    line-height: 1.1875;
+    color: var(--standart-text-color);
+    position: relative;
+}
+
+.price__li::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--standart-text-color);
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+}
+
+.price__li span {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.price__term {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.1875;
+    color: var(--standart-text-color);
+}
+
+.price__term span {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.price__grey {
+    padding-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.1875;
+    color: var(--accent-text-color);
+}
+
+.price__sub-ul {
+    margin: 20px 0;
+}
+
+.price__sub-li {
+    font-size: 12px;
+    line-height: 1.1666;
+    color: var(--standart-text-color);
+    position: relative;
+}
+
+.price__sub-li::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--standart-text-color);
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+}
+
+.price__show-all {
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    color: var(--standart-text-color);
+    cursor: pointer;
+}
+
+.arrow-left {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.arrow {
+    pointer-events: none;
+}
+
+.arrow__wrapper {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+    cursor: pointer;
+}
+
+.arrow__wrapper p {
+    pointer-events: none;
+}
+
+.arrow__sub-wrapper {
+    cursor: pointer;
+}
+
 .footer {
     padding: 50px 0px 150px;
     background-color: var(--bg-color);
 }
 
 .footer__line {
-    width: 1620px;
+    max-width: 1620px;
     height: 1px;
     margin: 0 auto 60px;
     border: 1px solid #9C9C9C;
