@@ -59,6 +59,7 @@ if(slider) {
       item.classList.add('none');
     }
   
+
     item.addEventListener('click', function () {
   
       const nextSlideIndex = parseInt(item.dataset.index) + 1 < items.length ? parseInt(item.dataset.index) + 1 : 0;
@@ -87,7 +88,6 @@ const squaresDate = document.querySelector('[data-squares="squares"]');
 
 if (fasade) {
 
-
   fasade.addEventListener('click', function () {
     fasadeDate.classList.remove('none');
     fasade.classList.add('acticve-color');
@@ -97,13 +97,15 @@ if (fasade) {
     squares.classList.remove('acticve-color');
 
     const sliderFasade = document.querySelector('.plane__fasad');
-
     const sliderItems = Array.from(sliderFasade.children);
+
+
+    sliderFasade.firstElementChild.classList.remove('none');
 
     sliderItems.forEach(function (slide, index) {
 
       slide.dataset.index = index;
-
+    
       if (slide.dataset.index != 0) {
         slide.classList.add('none');
       }
@@ -112,11 +114,8 @@ if (fasade) {
         const nextSlideIndex = parseInt(slide.dataset.index) + 1 < sliderItems.length ? parseInt(slide.dataset.index) + 1 : 0;
         slide.classList.add('none');
         const nextSlide = sliderFasade.querySelector(`[data-index="${nextSlideIndex}"]`);
-        //    const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
         nextSlide.classList.remove('none');
 
-
-        //      const nextSlideIndex = parseInt(item.dataset.index) + 1 < items.length ? parseInt(item.dataset.index) + 1 : 0;
         console.log(nextSlideIndex);
 
       })
