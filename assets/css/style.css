@@ -68,9 +68,12 @@
     --container-offset: 15px;
     --container-standart: calc(var(--container-width) + (var(--container-offset) * 2));
     --standart-text-color: #000;
+    --active-text-color: #0E0E0F;
     --alternative-text-color: #828282;
     --accent-text-color: #717171;
     --bg-color: #F4F3F3;
+    --line-color: #9C9C9C;
+    --hover-text-color: #CBCBCB;
 }
 
 *, *::before, *::after {
@@ -139,7 +142,7 @@ ul, li {
 .line {
     max-width: 1620px;
     height: 1px;
-    border: 1px solid #9C9C9C;
+    border: 1px solid var(--line-color);
 }
 
 .header {
@@ -445,20 +448,198 @@ ul, li {
     cursor: pointer;
 }
 
+.about {
+    background-color: var(--bg-color);
+}
+
+.about__row {
+    padding: 69px 0 0;
+    display: flex;
+    -moz-column-gap: 260px;
+    column-gap: 260px;
+}
+
+.about__title {
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--standart-text-color);
+}
+
+.about__content {
+    max-width: 334px;
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about__content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.1875;
+    color: var(--standart-text-color);
+}
+
+.about__content p span {
+    font-weight: 600;
+}
+
+.about__img {
+    width: 1024px;
+    height: 590px;
+    border: 1px solid #D9D9D9;
+}
+
+.project {
+    font-family: "Raleway";
+    background-color: var(--bg-color);
+}
+
+.project__img img {
+    width: 100%;
+    height: calc(100vh - 74px);
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.project__content {
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.project__title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 1.667;
+    color: var(--standart-text-color);
+}
+
+.project__description {
+    font-family: "Century Gothic";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--standart-text-color);
+}
+
+.project__description span {
+    font-weight: 400;
+}
+
+.slider {
+    padding-bottom: 145px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__list {
+    max-width: 1196px;
+    height: auto;
+    border: 1px solid red;
+}
+
+.slider__item {
+    cursor: pointer;
+}
+
+.slider__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    border: 1px solid red;
+}
+
+.slider__nav img {
+    width: 185px;
+    height: 185px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    cursor: pointer;
+    position: relative;
+}
+
+.plane {
+    padding-bottom: 138px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plane__img {
+    width: 1196px;
+}
+
+.plane__img img {
+    margin: 0 auto;
+}
+
+.plane__nav {
+    width: 185px;
+    font-family: "Century Gothic";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--accent-text-color);
+}
+
+.plane__nav-item {
+    cursor: pointer;
+}
+
+.plane__nav-item.acticve-color, .plane__nav-item:hover {
+    color: var(--active-text-color);
+}
+
+.plane__nav-item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.linking {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linking a {
+    font-family: "Century Gothic";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--accent-text-color);
+}
+
+.linking a:hover {
+    color: var(--hover-text-color);
+}
+
+.linking a:hover path {
+    stroke: var(--hover-text-color);
+}
+
+.linking__prev, .linking__next {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+}
+
+.linking__prev path, .linking__next path {
+    stroke: var(--accent-text-color);
+}
+
 .footer {
-    padding: 50px 0px 150px;
+    padding: 50px 0px 50px;
     background-color: var(--bg-color);
 }
 
 .footer__line {
     max-width: 1620px;
     height: 1px;
-    margin: 0 auto 60px;
     border: 1px solid #9C9C9C;
 }
 
 .footer__soc {
-    margin: 0 auto;
+    margin: 60px auto 0;
     max-width: 283px;
     display: flex;
     -moz-column-gap: 30px;
