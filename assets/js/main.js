@@ -19,13 +19,10 @@ if (priceElems) {
         pricesubul.classList.toggle('none');
         const myArrow = e.target.querySelector('img');
         myArrow.classList.toggle('rotate-img')
-  
-      }
+        }
     })
   })
-  
 }
-
 
 const priceShowAll = document.querySelector('.price__show-all');
 
@@ -40,54 +37,84 @@ if (priceShowAll) {
     for (let image of images) {
       image.classList.add('rotate-img');
     }
-  
-  
   })
-  
 }
-const slider = document.querySelector('.slider__list')
-const items = Array.from(slider.children);
-
+const sliderList = document.querySelectorAll('.slider__item')
+const slider = Array.from(sliderList);
 
 if(slider) {
-  items.forEach(function (item, index) {
 
-    item.dataset.index = index;
+  slider.forEach(function (slide, index) {
+
+    slide.dataset.index = index;
   
-  
-    if (item.dataset.index != 0) {
-      item.classList.add('none');
+    if (slide.dataset.index != 0) {
+      slide.classList.add('none');
     }
-  
 
-    item.addEventListener('click', function () {
-  
-      const nextSlideIndex = parseInt(item.dataset.index) + 1 < items.length ? parseInt(item.dataset.index) + 1 : 0;
-      console.log(nextSlideIndex);
-      item.classList.add('none');
-      console.log(`data-index="${nextSlideIndex}"`)
-      const nextSlide = slider.querySelector(`[data-index="${nextSlideIndex}"]`);
-      console.log(nextSlide);
+    slider[0].setAttribute('data-active-slide', '');
+
+    slide.addEventListener('click', function () {
+
+      slide.classList.add('none');
+      slide.removeAttribute('data-active-slide');
+      
+      const nextSlideIndex = parseInt(slide.dataset.index) + 1 < slider.length ? parseInt(slide.dataset.index) + 1 : 0;
+      const parentElement = slide.closest('.slider__list');
+
+      const nextSlide = parentElement.querySelector(`[data-index="${nextSlideIndex}"]`)
       nextSlide.classList.remove('none');
-  
+      nextSlide.setAttribute('data-active-slide', '');
     })
-  
-  
+
   })
+
+  const nextArrowSlid = document.querySelector('.slider__arrow-right');
+
+  nextArrowSlid.addEventListener('click', function() {
+    const slideCurrent = document.querySelector('[data-active-slide]');
+    const slideIndexCurrent = slideCurrent.dataset.index;
+
+    slideCurrent.classList.add('none');
+    slideCurrent.removeAttribute('data-active-slide');
+
+    const nextSlideIndex = Number(slideIndexCurrent) + 1 < slider.length ? Number(slideIndexCurrent) + 1 : 0;
+    const parentElement = nextArrowSlid.closest('.slider__list');
+    const nextSlid = parentElement.querySelector(`[data-index="${nextSlideIndex}"]`);
+
+    nextSlid.classList.remove('none');
+    nextSlid.setAttribute('data-active-slide', '');
+  })
+
+  const prevArrowSlide = document.querySelector('.slider__arrow-left');
+
+  prevArrowSlide.addEventListener('click', function() {
+
+    const slideCurrent = document.querySelector('[data-active-slide]');
+    const slideIndexCurrent = slideCurrent.dataset.index;
+
+    slideCurrent.classList.add('none');
+    slideCurrent.removeAttribute('data-active-slide');
+
+    const prevSlideIndex = Number(slideIndexCurrent) - 1 > 0 ? Number(slideIndexCurrent) - 1 : (slider.length - 1);
+    const parentElement =  prevArrowSlide.closest('.slider__list');
+    const prevSlide = parentElement.querySelector(`[data-index="${prevSlideIndex}"]`);
+
+    prevSlide.classList.remove('none');
+    prevSlide.setAttribute('data-active-slide', '');
+
+  })
+
 }
 const fasade = document.querySelector('.fasade');
 const plane = document.querySelector('.plane-nav');
 const squares = document.querySelector('.squares');
 
-
 const fasadeDate = document.querySelector('[data-fasad="fasad"]');
 const planeDate = document.querySelector('[data-plan="plan"]');
 const squaresDate = document.querySelector('[data-squares="squares"]');
 
-
-
 if (fasade) {
-
   fasade.addEventListener('click', function () {
     fasadeDate.classList.remove('none');
     fasade.classList.add('acticve-color');
@@ -96,40 +123,71 @@ if (fasade) {
     plane.classList.remove('acticve-color');
     squares.classList.remove('acticve-color');
 
-    const sliderFasade = document.querySelector('.plane__fasad');
-    const sliderItems = Array.from(sliderFasade.children);
 
-
-    sliderFasade.firstElementChild.classList.remove('none');
+    const sliderFasade = document.querySelectorAll('.plane__slide');
+    const sliderItems = Array.from(sliderFasade)
+    const nextArrowFasad = document.querySelector('.fasad__arrow-right');
+    const prevArrowFasad = document.querySelector('.fasad__arrow-left');
 
     sliderItems.forEach(function (slide, index) {
 
       slide.dataset.index = index;
-    
+
       if (slide.dataset.index != 0) {
         slide.classList.add('none');
       }
 
+      sliderItems[0].classList.remove('none');
+      sliderItems[0].setAttribute('data-active-fasad', '');
+
       slide.addEventListener('click', function () {
-        const nextSlideIndex = parseInt(slide.dataset.index) + 1 < sliderItems.length ? parseInt(slide.dataset.index) + 1 : 0;
+
         slide.classList.add('none');
-        const nextSlide = sliderFasade.querySelector(`[data-index="${nextSlideIndex}"]`);
+        slide.removeAttribute('data-active-fasad');
+
+        const nextSlideIndex = Number(slide.dataset.index) + 1 < sliderItems.length ? Number(slide.dataset.index) + 1 : 0;
+        const parentElement = slide.closest('div');
+
+        const nextSlide = parentElement.querySelector(`[data-index="${nextSlideIndex}"]`);
         nextSlide.classList.remove('none');
-
-        console.log(nextSlideIndex);
-
+        nextSlide.setAttribute('data-active-fasad', '');
       })
+    })
 
+    nextArrowFasad.addEventListener('click', function () {
+      const slideCurrent = document.querySelector('[data-active-fasad]');
+      const slideIndexCurrent = slideCurrent.dataset.index;
+
+      slideCurrent.classList.add('none');
+      slideCurrent.removeAttribute('data-active-fasad');
+
+      const nextSlideIndex = (Number(slideIndexCurrent) + 1) < sliderItems.length ? (Number(slideIndexCurrent) + 1) : 0;
+      const parentElement = nextArrowFasad.closest('.plane__fasad');
+      const nextSlide = parentElement.querySelector(`[data-index="${nextSlideIndex}"]`);
+      console.log(nextSlide);
+      nextSlide.classList.remove('none');
+      nextSlide.setAttribute('data-active-fasad', '');
 
     })
 
+    prevArrowFasad.addEventListener('click', function () {
+      const slideCurrent = document.querySelector('[data-active-fasad]');
+      const slideIndexCurrent = slideCurrent.dataset.index;
+
+      slideCurrent.classList.add('none');
+      slideCurrent.removeAttribute('data-active-fasad');
+
+      const prevSlideIndex = (Number(slideIndexCurrent) - 1) > 0 ? (Number(slideIndexCurrent) - 1) : (sliderItems.length - 1);
+      const parentElement = prevArrowFasad.closest('.plane__fasad');
+      const prevSlide = parentElement.querySelector(`[data-index="${prevSlideIndex}"]`);
+      prevSlide.classList.remove('none');
+      prevSlide.setAttribute('data-active-fasad', '');
+    })
   })
+
 }
 
-
 if (plane) {
-
-
   plane.addEventListener('click', function () {
     planeDate.classList.remove('none');
     plane.classList.add('acticve-color');
@@ -137,12 +195,10 @@ if (plane) {
     squaresDate.classList.add('none');
     fasade.classList.remove('acticve-color');
     squares.classList.remove('acticve-color');
-
   })
 }
 
 if (squares) {
-
   squares.addEventListener('click', function () {
     squaresDate.classList.remove('none');
     squares.classList.add('acticve-color');

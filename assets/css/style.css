@@ -538,6 +538,24 @@ ul, li {
     max-width: 1196px;
     height: auto;
     border: 1px solid red;
+    position: relative;
+}
+
+.slider__list-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    right: 10px;
+    pointer-events: none;
+}
+
+.slider__list-navigation img {
+    pointer-events: fill;
+    border: 1px solid red;
+    cursor: pointer;
 }
 
 .slider__item {
@@ -572,6 +590,28 @@ ul, li {
 
 .plane__img img {
     margin: 0 auto;
+}
+
+.plane__fasad {
+    position: relative;
+}
+
+.plane__fasad-navigation {
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plane__fasad-navigation img {
+    margin-left: 0;
+    margin-right: 0;
+    cursor: pointer;
+    pointer-events: fill;
 }
 
 .plane__nav {
