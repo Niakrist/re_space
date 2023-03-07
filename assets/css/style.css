@@ -177,11 +177,31 @@ ul, li {
     column-gap: 40px;
 }
 
+@media (max-width: 700px) {
+    .nav {
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+}
+
 .nav__list {
     display: flex;
     align-items: center;
     -moz-column-gap: 45px;
     column-gap: 45px;
+}
+
+@media (max-width: 700px) {
+    .nav__list {
+        -moz-column-gap: 25px;
+        column-gap: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav__list {
+        display: none;
+    }
 }
 
 .nav__link {
@@ -202,6 +222,62 @@ ul, li {
     background-color: var(--bg-color);
     border: 1px solid var(--standart-text-color);
     border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+    .button {
+        padding: 17px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .button {
+        display: none;
+    }
+}
+
+.button-mob {
+    display: none;
+    padding: 12px 2px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 576px) {
+    .button-mob {
+        display: block;
+    }
+}
+
+.button-mob span {
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: var(--standart-text-color);
+    position: relative;
+}
+
+.button-mob span::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: var(--standart-text-color);
+}
+
+.button-mob span::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: var(--standart-text-color);
 }
 
 .projects {
@@ -499,7 +575,7 @@ ul, li {
 
 .project__img img {
     width: 100%;
-    height: calc(100vh - 74px);
+    height: auto;
     -o-object-fit: cover;
     object-fit: cover;
 }
@@ -509,19 +585,58 @@ ul, li {
     padding-bottom: 50px;
 }
 
+@media (max-width: 700px) {
+    .project__content {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project__content {
+        padding-top: 30px;
+    }
+}
+
 .project__title {
-    font-weight: 800;
     font-size: 48px;
+    font-weight: 800;
     line-height: 1.667;
     color: var(--standart-text-color);
 }
 
+@media (max-width: 700px) {
+    .project__title {
+        font-size: 42px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 500px) {
+    .project__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 410px) {
+    .project__title {
+        font-size: 26px;
+    }
+}
+
 .project__description {
     font-family: "Century Gothic";
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
     line-height: 1.25;
     color: var(--standart-text-color);
+}
+
+@media (max-width: 500px) {
+    .project__description {
+        font-size: 14px;
+        font-weight: 600;
+    }
 }
 
 .project__description span {
@@ -529,14 +644,29 @@ ul, li {
 }
 
 .slider {
-    padding-bottom: 145px;
     display: flex;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
     justify-content: space-between;
+}
+
+@media (max-width: 830px) {
+    .slider {
+        flex-direction: column;
+        -moz-column-gap: unset;
+        column-gap: unset;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        padding-bottom: 30px;
+    }
 }
 
 .slider__list {
     max-width: 1196px;
-    height: auto;
+    max-height: 840px;
     border: 1px solid red;
     position: relative;
 }
@@ -563,29 +693,85 @@ ul, li {
 }
 
 .slider__nav {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
+    max-height: 840px;
+    overflow: hidden;
     border: 1px solid red;
 }
 
+@media (max-width: 830px) {
+    .slider__nav {
+        margin-top: 15px;
+        max-height: unset;
+        max-width: 830px;
+        display: flex;
+        -moz-column-gap: 15px;
+        column-gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider__nav {
+        display: none;
+    }
+}
+
 .slider__nav img {
-    width: 185px;
-    height: 185px;
+    max-width: 185px;
+    max-height: 185px;
     -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
     cursor: pointer;
-    position: relative;
+}
+
+@media (max-width: 830px) {
+    .slider__nav img {
+        max-width: unset;
+        max-height: unset;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.slider__nav img:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 830px) {
+    .slider__nav img:not(:last-child) {
+        margin-bottom: unset;
+    }
 }
 
 .plane {
     padding-bottom: 138px;
     display: flex;
     justify-content: space-between;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+
+@media (max-width: 830px) {
+    .plane {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .plane {
+        flex-direction: column-reverse;
+    }
 }
 
 .plane__img {
     width: 1196px;
+}
+
+@media (max-width: 830px) {
+    .plane__img {
+        width: unset;
+    }
 }
 
 .plane__img img {
@@ -623,6 +809,28 @@ ul, li {
     color: var(--accent-text-color);
 }
 
+@media (max-width: 830px) {
+    .plane__nav {
+        margin-bottom: 30px;
+        width: unset;
+        display: flex;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .plane__nav {
+        margin-bottom: 30px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        -moz-column-gap: 15px;
+        column-gap: 15px;
+    }
+}
+
 .plane__nav-item {
     cursor: pointer;
 }
@@ -640,12 +848,35 @@ ul, li {
     justify-content: space-between;
 }
 
+@media (max-width: 576px) {
+    .linking {
+        justify-content: center;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .linking {
+        -moz-column-gap: 15px;
+        column-gap: 15px;
+    }
+}
+
 .linking a {
     font-family: "Century Gothic";
     font-weight: 700;
     font-size: 16px;
     line-height: 1.25;
     color: var(--accent-text-color);
+}
+
+@media (max-width: 500px) {
+    .linking a {
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+    }
 }
 
 .linking a:hover {
