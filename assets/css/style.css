@@ -644,6 +644,7 @@ ul, li {
 }
 
 .slider {
+    padding-bottom: 140px;
     display: flex;
     -moz-column-gap: 30px;
     column-gap: 30px;
@@ -652,15 +653,10 @@ ul, li {
 
 @media (max-width: 830px) {
     .slider {
+        padding-bottom: 30px;
         flex-direction: column;
         -moz-column-gap: unset;
         column-gap: unset;
-    }
-}
-
-@media (max-width: 576px) {
-    .slider {
-        padding-bottom: 30px;
     }
 }
 
@@ -754,13 +750,8 @@ ul, li {
 
 @media (max-width: 830px) {
     .plane {
-        padding-bottom: 30px;
-    }
-}
-
-@media (max-width: 576px) {
-    .plane {
         flex-direction: column-reverse;
+        padding-bottom: 30px;
     }
 }
 
@@ -822,7 +813,6 @@ ul, li {
 
 @media (max-width: 500px) {
     .plane__nav {
-        margin-bottom: 30px;
         font-size: 14px;
         font-weight: 500;
         text-align: center;
