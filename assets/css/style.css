@@ -234,6 +234,7 @@ ul, li {
 }
 
 .nav__menu-mob-link {
+    font-family: "Century Gothic";
     margin-top: 20px;
     font-size: 20px;
     color: #fff;
