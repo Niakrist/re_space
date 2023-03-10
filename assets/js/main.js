@@ -249,3 +249,9 @@ let mySwiper = new Swiper(slider, {
   }
 
 });
+const btnMenu = document.querySelector('.btn__menu');
+const navMenuMob = document.querySelector('.nav__menu-mob');
+
+btnMenu.addEventListener('click', function() {
+  navMenuMob.classList.toggle('nav__menu-mob--active');
+})
