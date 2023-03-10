@@ -1236,11 +1236,11 @@ ul, li {
 }
 
 path {
-    stroke: green;
+    stroke: hotpink;
     stroke-width: 2;
-    stroke-dasharray: 200;
-    stroke-dashoffset: 200;
-    animation: draw 7s linear forwards;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+    animation: draw 5s linear infinite;
 }
 
 @keyframes draw {
