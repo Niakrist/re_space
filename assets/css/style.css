@@ -234,7 +234,7 @@ ul, li {
 }
 
 .nav__menu-mob-link {
-    font-family: "Century Gothic";
+    font-family: "CenturyGothic";
     margin-top: 20px;
     font-size: 20px;
     color: #fff;
@@ -660,6 +660,7 @@ ul, li {
 }
 
 .about {
+    font-family: "Raleway";
     background-color: var(--bg-color);
 }
 
@@ -1232,6 +1233,20 @@ ul, li {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+}
+
+path {
+    stroke: green;
+    stroke-width: 2;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: draw 7s linear forwards;
+}
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 
 .footer {
