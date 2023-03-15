@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <script defer src="./assets/js/main.min.js"></script>
+    <script defer src="./assets/js/swiper-bundle.min.js"></script>
     
     
     <title>Частный жилой дом Мяглово</title>
@@ -19,28 +20,37 @@
           <a href="./" class="header__logo">
     
             <svg width="37" height="40" viewBox="0 0 37 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18.0439 1V38.4614" stroke="black" stroke-width="2" stroke-linecap="round" />
-              <path d="M18.0449 1L1 10.2761L18.0449 19.7307L35.0898 10.2761V29.1852L18.0449 38.4614"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M18.0439 1V38.4614" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              <path d="M18.0449 1L1 10.2761L18.0449 19.7307L35.0898 10.2761V29.1852L18.0449 38.4614" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-    
-    
-    
             <span>re<br>space</span></a>
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item"><a href="./about.html" class="nav__link">О нас</a></li>
               <li class="nav__item"><a href="./price.html" class="nav__link">Прайс</a></li>
               <li class="nav__item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
+              <button class="button" id="open-pop-up">Заказать проект</button>
+    
+              <div class="pop-up" id="pop-up">
+                <div class="pop-up__container">
+                  <div class="pop-up__body" id="body-pop-up">
+                    <p>Оставить заявку</p>
+                    <form action="">
+                      <input type="text" placeholder="Имя">
+                      <input type="tel" placeholder="Телефон">
+                      <input type="email" placeholder="E-Mail">
+                      <textarea name="" id="" cols="30" rows="5" placeholder="Комментарий"></textarea>
+                      <button>Заказать проект</button>
+                      <div class="pop-up__close" id="close-pop-up">&#10006</div>
+                    </form>
+    
+    
+                  </div>
+                </div>
+              </div>
+              
             </ul>
-            <button class="button">Заказать проект</button>
             <button class="button-mob btn__menu"><span></span></button>
-            <nav class="nav__menu-mob">
-              <a href="./about.html" class="nav__menu-mob-link">О нас</a>
-              <a href="./contacts.html" class="nav__menu-mob-link">Контакты</a>
-              <a href="./price.html" class="nav__menu-mob-link">Прайс</a>
-              <a href="#!" class="nav__menu-mob-link">Заказать проект</a>
-            </nav>
           </nav>
         </div>
       </div>
@@ -141,7 +151,7 @@
                   <img class="plane__slide" src="./assets/images/myaglovo/myaglovo-fasad-04.png" alt="фасад фото 4">
                 </div>
         
-                <div class="rules"><img src="./assets/images/myaglovo/ruler-myaglovo.png" alt=""></div>
+                 <!-- <div class="rules"><img src="./assets/images/myaglovo/ruler-myaglovo.png" alt=""></div> -->
         
               </div>
               <div class="plane__nav">
