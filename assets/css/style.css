@@ -75,6 +75,7 @@
     --line-color: #9C9C9C;
     --hover-text-color: #CBCBCB;
     --button-color: #E6E6E6;
+    --floor-active-color: #8888FD;
 }
 
 *, *::before, *::after {
@@ -409,7 +410,7 @@ ul, li {
 }
 
 .price__title {
-    padding: 40px 0 60px;
+    padding: 40px 0 36px;
     font-weight: 700;
     font-size: 48px;
     line-height: 1.25;
@@ -1398,6 +1399,91 @@ ul, li {
         right: 10px;
         font-size: 18px;
     }
+}
+
+.draft {
+    padding-bottom: 138px;
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+
+@media (max-width: 991px) {
+    .draft {
+        flex-direction: column;
+        row-gap: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.draft__nav {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Century Gothic";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--accent-text-color);
+}
+
+@media (max-width: 991px) {
+    .draft__nav {
+        flex-direction: row;
+        width: unset;
+    }
+}
+
+@media (max-width: 575px) {
+    .draft__nav {
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+
+.draft__nav-izometriya, .draft__nav-plan, .draft__nav-square {
+    cursor: pointer;
+}
+
+.draft__nav-izometriya.draft-text-color-active, .draft__nav-izometriya:hover, .draft__nav-plan.draft-text-color-active, .draft__nav-plan:hover, .draft__nav-square.draft-text-color-active, .draft__nav-square:hover {
+    color: var(--active-text-color);
+}
+
+.izometriya,
+.plan,
+.square {
+    width: 1196px;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .izometriya,
+  .plan,
+  .square {
+        width: unset;
+    }
+}
+
+.level-item {
+    cursor: pointer;
+}
+
+.level-wrapper {
+    max-width: 100px;
+}
+
+.level-standart {
+    display: inline-block;
+    padding: 3px 10px;
+    margin-bottom: 2px;
+    background-color: var(--accent-text-color);
+    color: var(--bg-color);
+}
+
+.color-active {
+    background-color: var(--floor-active-color);
 }
 
 .footer {
