@@ -275,3 +275,212 @@ popUp.addEventListener('click', function(e) {
     popUp.classList.remove('active-pop-up'); 
   }
 })
+const izometriyaBtn = document.querySelector('.draft__nav-izometriya');
+const izometriya = document.querySelector('.izometriya');
+
+const planBtn = document.querySelector('.draft__nav-plan');
+const plan = document.querySelector('.plan')
+
+const squareBtn = document.querySelector('.draft__nav-square');
+const square = document.querySelector('.square');
+
+
+if (izometriyaBtn) {
+  getIzometriya();
+  izometriyaBtn.addEventListener('click', function () {
+    izometriya.classList.remove('none');
+    plan.classList.add('none');
+    square.classList.add('none');
+
+    izometriyaBtn.classList.add('draft-text-color-active');
+    planBtn.classList.remove('draft-text-color-active');
+    squareBtn.classList.remove('draft-text-color-active');
+
+    getIzometriya();
+  })
+}
+
+function getIzometriya() {
+
+  const izometriyaList = Array.from(izometriya.children);
+  const izometriyaLevel = document.querySelector('.level-wrapper');
+
+  if (izometriyaLevel.children.length > 1) {
+    izometriyaLevel.innerHTML = '';
+  }
+
+  for (let item of izometriyaList) {
+    item.classList.add('none');
+  }
+
+  izometriyaList[izometriyaList.length - 1].classList.remove('none');
+  izometriyaBtn.classList.add('draft-text-color-active');
+
+  for (let i = izometriyaList.length - 1; i >= 0; i--) {
+    const newFloor = document.createElement('div');
+    newFloor.textContent = (i + 1) + ' этаж';
+    newFloor.classList.add('level-item');
+    newFloor.classList.add('level-standart');
+    izometriyaLevel.appendChild(newFloor);
+  }
+
+  izometriyaLevel.lastChild.classList.add('color-active');
+
+  const izometriyaItemsLevel = Array.from(izometriyaLevel.children);
+
+  izometriyaList.forEach(function (izometriyaItem, index) {
+    izometriyaItem.dataset.indexIzometriya = index;
+
+    if (izometriyaItem.dataset.indexIzometriya != (izometriyaList.length - 1)) {
+      izometriyaItem.classList.add('none');
+    }
+  })
+
+  izometriyaItemsLevel.forEach(function (itemFloor, index) {
+    itemFloor.dataset.indexFloor = index;
+
+    itemFloor.addEventListener('click', function () {
+      const elem = document.querySelector(`[data-index-izometriya="${itemFloor.dataset.indexFloor}"]`);
+
+      for (let i = 0; i < izometriyaList.length; i++) {
+        izometriyaList[i].classList.add('none');
+        izometriyaItemsLevel[i].classList.remove('color-active');
+      }
+      elem.classList.remove('none');
+      itemFloor.classList.add('color-active');
+    })
+  })
+}
+
+if (planBtn) {
+  planBtn.addEventListener('click', function () {
+
+    izometriya.classList.add('none');
+    plan.classList.remove('none');
+    square.classList.add('none');
+
+    izometriyaBtn.classList.remove('draft-text-color-active');
+    planBtn.classList.add('draft-text-color-active');
+    squareBtn.classList.remove('draft-text-color-active');
+
+    getPlan();
+
+  })
+}
+
+function getPlan () {
+
+  const planList = Array.from(plan.children);
+  const planLevel = document.querySelector('.level-wrapper');
+
+  if (planLevel.children.length > 1) {
+    planLevel.innerHTML = '';
+  }
+
+  for (let item of planList) {
+    item.classList.add('none');
+  }
+
+  planList[planList.length - 1].classList.remove('none');
+
+  for (let i = planList.length - 1; i >= 0; i--) {
+    const newFloor = document.createElement('div');
+    newFloor.textContent = (i + 1) + ' этаж';
+    newFloor.classList.add('level-item');
+    newFloor.classList.add('level-standart');
+    planLevel.appendChild(newFloor);
+  }
+
+  planLevel.lastChild.classList.add('color-active');
+  const planItemsLevel = Array.from(planLevel.children);
+
+  planList.forEach(function (planItem, index) {
+    planItem.dataset.indexPlan = index;
+
+    if (planItem.dataset.indexPlan != (planList.length - 1)) {
+      planItem.classList.add('none');
+    }
+  })
+
+  planItemsLevel.forEach(function (itemFloor, index) {
+    itemFloor.dataset.indexFloor = index;
+
+    itemFloor.addEventListener('click', function () {
+      const elem = document.querySelector(`[data-index-plan="${itemFloor.dataset.indexFloor}"]`);
+
+      for (let i = 0; i < planList.length; i++) {
+        planList[i].classList.add('none');
+        planItemsLevel[i].classList.remove('color-active');
+      }
+      elem.classList.remove('none');
+      itemFloor.classList.add('color-active');
+    })
+  })
+}
+
+
+if (squareBtn) {
+  squareBtn.addEventListener('click', function () {
+
+    izometriya.classList.add('none');
+    plan.classList.add('none');
+    square.classList.remove('none');
+
+    izometriyaBtn.classList.remove('draft-text-color-active');
+    planBtn.classList.remove('draft-text-color-active');
+    squareBtn.classList.add('draft-text-color-active');
+
+    getSquare();
+
+  })
+}
+
+function getSquare () {
+
+  const squareList = Array.from(square.children);
+  const squareLevel = document.querySelector('.level-wrapper');
+
+  if (squareLevel.children.length > 1) {
+    squareLevel.innerHTML = '';
+  }
+
+  for (let item of squareList) {
+    item.classList.add('none');
+  }
+
+  squareList[squareList.length - 1].classList.remove('none');
+
+  for (let i = squareList.length - 1; i >= 0; i--) {
+    const newFloor = document.createElement('div');
+    newFloor.textContent = (i + 1) + ' этаж';
+    newFloor.classList.add('level-item');
+    newFloor.classList.add('level-standart');
+    squareLevel.appendChild(newFloor);
+  }
+
+  squareLevel.lastChild.classList.add('color-active');
+  const squareItemsLevel = Array.from(squareLevel.children);
+
+  squareList.forEach(function (squareItem, index) {
+    squareItem.dataset.indexSquare = index;
+
+    if (squareItem.dataset.indexSquare != (squareList.length - 1)) {
+      squareItem.classList.add('none');
+    }
+  })
+
+  squareItemsLevel.forEach(function (itemFloor, index) {
+    itemFloor.dataset.indexFloor = index;
+
+    itemFloor.addEventListener('click', function () {
+      const elem = document.querySelector(`[data-index-square="${itemFloor.dataset.indexFloor}"]`);
+
+      for (let i = 0; i < squareList.length; i++) {
+        squareList[i].classList.add('none');
+        squareItemsLevel[i].classList.remove('color-active');
+      }
+      elem.classList.remove('none');
+      itemFloor.classList.add('color-active');
+    })
+  })
+}
