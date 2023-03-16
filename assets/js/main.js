@@ -47,6 +47,80 @@ const fasadeDate = document.querySelector('[data-fasad="fasad"]');
 const planeDate = document.querySelector('[data-plan="plan"]');
 const squaresDate = document.querySelector('[data-squares="squares"]');
 
+// if (fasade) {
+//   fasade.addEventListener('click', function () {
+//     fasadeDate.classList.remove('none');
+//     fasade.classList.add('acticve-color');
+//     planeDate.classList.add('none');
+//     squaresDate.classList.add('none');
+//     plane.classList.remove('acticve-color');
+//     squares.classList.remove('acticve-color');
+
+
+//     const sliderFasade = document.querySelectorAll('.plane__slide');
+//     const sliderItems = Array.from(sliderFasade)
+//     const nextArrowFasad = document.querySelector('.fasad__arrow-right');
+//     const prevArrowFasad = document.querySelector('.fasad__arrow-left');
+
+//     sliderItems.forEach(function (slide, index) {
+
+//       slide.dataset.index = index;
+
+//       if (slide.dataset.index != 0) {
+//         slide.classList.add('none');
+//       }
+
+//       sliderItems[0].classList.remove('none');
+//       sliderItems[0].setAttribute('data-active-fasad', '');
+
+//       slide.addEventListener('click', function () {
+
+//         slide.classList.add('none');
+//         slide.removeAttribute('data-active-fasad');
+
+//         const nextSlideIndex = Number(slide.dataset.index) + 1 < sliderItems.length ? Number(slide.dataset.index) + 1 : 0;
+//         const parentElement = slide.closest('div');
+
+//         const nextSlide = parentElement.querySelector(`[data-index="${nextSlideIndex}"]`);
+//         nextSlide.classList.remove('none');
+//         nextSlide.setAttribute('data-active-fasad', '');
+//       })
+//     })
+
+//     nextArrowFasad.addEventListener('click', function () {
+//       const slideCurrent = document.querySelector('[data-active-fasad]');
+//       const slideIndexCurrent = slideCurrent.dataset.index;
+
+//       slideCurrent.classList.add('none');
+//       slideCurrent.removeAttribute('data-active-fasad');
+
+//       const nextSlideIndex = (Number(slideIndexCurrent) + 1) < sliderItems.length ? (Number(slideIndexCurrent) + 1) : 0;
+//       const parentElement = nextArrowFasad.closest('.plane__fasad');
+//       const nextSlide = parentElement.querySelector(`[data-index="${nextSlideIndex}"]`);
+//       console.log(nextSlide);
+//       nextSlide.classList.remove('none');
+//       nextSlide.setAttribute('data-active-fasad', '');
+
+//     })
+
+//     prevArrowFasad.addEventListener('click', function () {
+//       const slideCurrent = document.querySelector('[data-active-fasad]');
+//       const slideIndexCurrent = slideCurrent.dataset.index;
+
+//       slideCurrent.classList.add('none');
+//       slideCurrent.removeAttribute('data-active-fasad');
+
+//       const prevSlideIndex = (Number(slideIndexCurrent) - 1) > 0 ? (Number(slideIndexCurrent) - 1) : (sliderItems.length - 1);
+//       const parentElement = prevArrowFasad.closest('.plane__fasad');
+//       const prevSlide = parentElement.querySelector(`[data-index="${prevSlideIndex}"]`);
+//       prevSlide.classList.remove('none');
+//       prevSlide.setAttribute('data-active-fasad', '');
+//     })
+//   })
+
+// }
+
+
 if (fasade) {
   fasade.addEventListener('click', function () {
     fasadeDate.classList.remove('none');
@@ -55,71 +129,8 @@ if (fasade) {
     squaresDate.classList.add('none');
     plane.classList.remove('acticve-color');
     squares.classList.remove('acticve-color');
-
-
-    const sliderFasade = document.querySelectorAll('.plane__slide');
-    const sliderItems = Array.from(sliderFasade)
-    const nextArrowFasad = document.querySelector('.fasad__arrow-right');
-    const prevArrowFasad = document.querySelector('.fasad__arrow-left');
-
-    sliderItems.forEach(function (slide, index) {
-
-      slide.dataset.index = index;
-
-      if (slide.dataset.index != 0) {
-        slide.classList.add('none');
-      }
-
-      sliderItems[0].classList.remove('none');
-      sliderItems[0].setAttribute('data-active-fasad', '');
-
-      slide.addEventListener('click', function () {
-
-        slide.classList.add('none');
-        slide.removeAttribute('data-active-fasad');
-
-        const nextSlideIndex = Number(slide.dataset.index) + 1 < sliderItems.length ? Number(slide.dataset.index) + 1 : 0;
-        const parentElement = slide.closest('div');
-
-        const nextSlide = parentElement.querySelector(`[data-index="${nextSlideIndex}"]`);
-        nextSlide.classList.remove('none');
-        nextSlide.setAttribute('data-active-fasad', '');
-      })
-    })
-
-    nextArrowFasad.addEventListener('click', function () {
-      const slideCurrent = document.querySelector('[data-active-fasad]');
-      const slideIndexCurrent = slideCurrent.dataset.index;
-
-      slideCurrent.classList.add('none');
-      slideCurrent.removeAttribute('data-active-fasad');
-
-      const nextSlideIndex = (Number(slideIndexCurrent) + 1) < sliderItems.length ? (Number(slideIndexCurrent) + 1) : 0;
-      const parentElement = nextArrowFasad.closest('.plane__fasad');
-      const nextSlide = parentElement.querySelector(`[data-index="${nextSlideIndex}"]`);
-      console.log(nextSlide);
-      nextSlide.classList.remove('none');
-      nextSlide.setAttribute('data-active-fasad', '');
-
-    })
-
-    prevArrowFasad.addEventListener('click', function () {
-      const slideCurrent = document.querySelector('[data-active-fasad]');
-      const slideIndexCurrent = slideCurrent.dataset.index;
-
-      slideCurrent.classList.add('none');
-      slideCurrent.removeAttribute('data-active-fasad');
-
-      const prevSlideIndex = (Number(slideIndexCurrent) - 1) > 0 ? (Number(slideIndexCurrent) - 1) : (sliderItems.length - 1);
-      const parentElement = prevArrowFasad.closest('.plane__fasad');
-      const prevSlide = parentElement.querySelector(`[data-index="${prevSlideIndex}"]`);
-      prevSlide.classList.remove('none');
-      prevSlide.setAttribute('data-active-fasad', '');
-    })
   })
-
 }
-
 if (plane) {
   plane.addEventListener('click', function () {
     planeDate.classList.remove('none');
@@ -286,6 +297,11 @@ const square = document.querySelector('.square');
 
 
 if (izometriyaBtn) {
+
+  plan.classList.add('none');
+  square.classList.add('none');
+
+
   getIzometriya();
   izometriyaBtn.addEventListener('click', function () {
     izometriya.classList.remove('none');
@@ -298,6 +314,9 @@ if (izometriyaBtn) {
 
     getIzometriya();
   })
+} else if (planBtn) {
+  planBtn.classList.add('draft-text-color-active');
+  getPlan();
 }
 
 function getIzometriya() {
@@ -305,7 +324,7 @@ function getIzometriya() {
   const izometriyaList = Array.from(izometriya.children);
   const izometriyaLevel = document.querySelector('.level-wrapper');
 
-  if (izometriyaLevel.children.length > 1) {
+  if (izometriyaLevel.children.length > 0) {
     izometriyaLevel.innerHTML = '';
   }
 
@@ -353,14 +372,20 @@ function getIzometriya() {
 }
 
 if (planBtn) {
+
+  square.classList.add('none');
+
   planBtn.addEventListener('click', function () {
 
-    izometriya.classList.add('none');
-    plan.classList.remove('none');
-    square.classList.add('none');
+    if (izometriya) {
+      izometriya.classList.add('none');
+      izometriyaBtn.classList.remove('draft-text-color-active');
+    }
 
-    izometriyaBtn.classList.remove('draft-text-color-active');
+    plan.classList.remove('none');
     planBtn.classList.add('draft-text-color-active');
+
+    square.classList.add('none');
     squareBtn.classList.remove('draft-text-color-active');
 
     getPlan();
@@ -373,7 +398,7 @@ function getPlan () {
   const planList = Array.from(plan.children);
   const planLevel = document.querySelector('.level-wrapper');
 
-  if (planLevel.children.length > 1) {
+  if (planLevel.children.length > 0) {
     planLevel.innerHTML = '';
   }
 
@@ -422,12 +447,16 @@ function getPlan () {
 if (squareBtn) {
   squareBtn.addEventListener('click', function () {
 
-    izometriya.classList.add('none');
-    plan.classList.add('none');
-    square.classList.remove('none');
+    if (izometriya) {
+      izometriya.classList.add('none');
+      izometriyaBtn.classList.remove('draft-text-color-active');
+  
+    }
 
-    izometriyaBtn.classList.remove('draft-text-color-active');
+    plan.classList.add('none');
     planBtn.classList.remove('draft-text-color-active');
+    
+    square.classList.remove('none');
     squareBtn.classList.add('draft-text-color-active');
 
     getSquare();
@@ -440,7 +469,7 @@ function getSquare () {
   const squareList = Array.from(square.children);
   const squareLevel = document.querySelector('.level-wrapper');
 
-  if (squareLevel.children.length > 1) {
+  if (squareLevel.children.length > 0) {
     squareLevel.innerHTML = '';
   }
 
