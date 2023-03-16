@@ -47,6 +47,54 @@ const fasadeDate = document.querySelector('[data-fasad="fasad"]');
 const planeDate = document.querySelector('[data-plan="plan"]');
 const squaresDate = document.querySelector('[data-squares="squares"]');
 
+if (fasade) {
+  fasade.addEventListener('click', function () {
+
+    fasadeDate.classList.remove('none');
+    fasade.classList.add('acticve-color');
+
+    planeDate.classList.add('none');
+    plane.classList.remove('acticve-color');
+
+    squaresDate.classList.add('none');
+    squares.classList.remove('acticve-color');
+
+  })
+}
+if (plane) {
+  plane.addEventListener('click', function () {
+
+    if (fasade) {
+      fasadeDate.classList.add('none');
+      fasade.classList.remove('acticve-color');
+    }
+
+    planeDate.classList.remove('none');
+    plane.classList.add('acticve-color');
+   
+
+    squaresDate.classList.add('none');
+    squares.classList.remove('acticve-color');
+  })
+}
+
+if (squares) {
+  squares.addEventListener('click', function () {
+
+    if (fasade) {
+      fasadeDate.classList.add('none');
+      fasade.classList.remove('acticve-color');
+    }
+
+    planeDate.classList.add('none');
+    plane.classList.remove('acticve-color');
+
+    squaresDate.classList.remove('none');
+    squares.classList.add('acticve-color');
+
+  })
+}
+
 // if (fasade) {
 //   fasade.addEventListener('click', function () {
 //     fasadeDate.classList.remove('none');
@@ -117,41 +165,7 @@ const squaresDate = document.querySelector('[data-squares="squares"]');
 //       prevSlide.setAttribute('data-active-fasad', '');
 //     })
 //   })
-
 // }
-
-
-if (fasade) {
-  fasade.addEventListener('click', function () {
-    fasadeDate.classList.remove('none');
-    fasade.classList.add('acticve-color');
-    planeDate.classList.add('none');
-    squaresDate.classList.add('none');
-    plane.classList.remove('acticve-color');
-    squares.classList.remove('acticve-color');
-  })
-}
-if (plane) {
-  plane.addEventListener('click', function () {
-    planeDate.classList.remove('none');
-    plane.classList.add('acticve-color');
-    fasadeDate.classList.add('none');
-    squaresDate.classList.add('none');
-    fasade.classList.remove('acticve-color');
-    squares.classList.remove('acticve-color');
-  })
-}
-
-if (squares) {
-  squares.addEventListener('click', function () {
-    squaresDate.classList.remove('none');
-    squares.classList.add('acticve-color');
-    fasadeDate.classList.add('none');
-    planeDate.classList.add('none');
-    fasade.classList.remove('acticve-color');
-    plane.classList.remove('acticve-color');
-  })
-}
 /**
  * Swiper 9.1.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
