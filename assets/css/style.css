@@ -1498,6 +1498,61 @@ ul, li {
     background-color: var(--floor-active-color);
 }
 
+.header__title-h2 {
+    padding: 80px 0 50px;
+}
+
+.title-h2 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 1.17;
+    color: var(--standart-text-color);
+}
+
+.sochi {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sochi__nav {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Century Gothic";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--accent-text-color);
+}
+
+@media (max-width: 991px) {
+    .sochi__nav {
+        flex-direction: row;
+        width: unset;
+    }
+}
+
+@media (max-width: 575px) {
+    .sochi__nav {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 250%;
+    }
+}
+
+.sochi__nav-izometriya, .sochi__nav-plan, .sochi__nav-square {
+    cursor: pointer;
+}
+
+.sochi__nav-izometriya.draft-text-color-active, .sochi__nav-izometriya:hover, .sochi__nav-plan.draft-text-color-active, .sochi__nav-plan:hover, .sochi__nav-square.draft-text-color-active, .sochi__nav-square:hover {
+    color: var(--active-text-color);
+}
+
+.sochi + .linking {
+    padding-top: 140px;
+}
+
 .footer {
     flex: 0 0 auto;
     padding: 50px 0px 50px;
