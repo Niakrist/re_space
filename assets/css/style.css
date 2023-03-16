@@ -1078,6 +1078,7 @@ ul, li {
 
 .plane__img {
     width: 1196px;
+    margin: 0 auto;
 }
 
 @media (max-width: 991px) {
@@ -1409,6 +1410,10 @@ ul, li {
     column-gap: 30px;
 }
 
+.draft img {
+    margin: 0 auto;
+}
+
 @media (max-width: 991px) {
     .draft {
         flex-direction: column;
@@ -1440,6 +1445,7 @@ ul, li {
     .draft__nav {
         font-weight: 700;
         font-size: 14px;
+        line-height: 250%;
     }
 }
 
@@ -1480,6 +1486,12 @@ ul, li {
     margin-bottom: 2px;
     background-color: var(--accent-text-color);
     color: var(--bg-color);
+}
+
+@media (max-width: 575px) {
+    .level-standart {
+        margin-bottom: 5px;
+    }
 }
 
 .color-active {
