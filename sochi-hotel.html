@@ -35,16 +35,14 @@
                 <div class="pop-up__container">
                   <div class="pop-up__body" id="body-pop-up">
                     <p>Оставить заявку</p>
-                    <form action="">
+                    <form class="js-form-send" method="POST" action="./sendform.php">
                       <input type="text" name="name" placeholder="Имя">
                       <input type="tel" name="tele" placeholder="Телефон">
                       <input type="email" name="email" placeholder="E-Mail">
                       <textarea name="text" id="" cols="30" rows="5" placeholder="Комментарий"></textarea>
-                      <button>Заказать проект</button>
+                      <button class="js-form-button">Заказать проект</button>
                       <div class="pop-up__close" id="close-pop-up">&#10006</div>
                     </form>
-    
-    
                   </div>
                 </div>
               </div>
@@ -78,27 +76,30 @@
               <h2 class="title-h2" id="l">Дом L</h2>
             </div>
             <div class="sochi">
-              <div class="izometriya none" data-draft="izometriya">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-3.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-2.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-1.png" alt="">
-              </div>
-              <div class="plan" data-draft="plan">
-                <img class="plan-img" src="./assets/images/hotel-sochi/plan-l-1.png" alt="">
-                <img class="plan-img none" src="./assets/images/hotel-sochi/plan-l-1.png" alt="">
-              </div>
-              <div class="square none" data-draft="square">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-2.png" alt="">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-1.png" alt="">
+        
+              <div class="sochi__wrapper">
+                <div class="izometriya" data-l="izometriya">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-l-3.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-l-2.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-l-1.png" alt="">
+                </div>
+                <div class="plan none" data-l="plan">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-l-2.png" alt="">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-l-1.png" alt="">
+                </div>
+                <div class="square none" data-l="square">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-l-2.png" alt="">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-l-1.png" alt="">
+                </div>
               </div>
               <div class="sochi__nav">
                 <div class="sochi__nav-wrapper">
                   <a href="./sochi-dom-l.html" class="sochi__nav-izometriya">Страница проекта</a>
-                  <div class="sochi__nav-izometriya">Аксонометрия</div>
-                  <div class="sochi__nav-plan">План помещения</div>
-                  <div class="sochi__nav-square">Площадь м²</div>
+                  <div class="sochi__nav-izometriya sochi__nav-izometriya-l">Аксонометрия</div>
+                  <div class="sochi__nav-plan sochi__nav-plan-l">План помещения</div>
+                  <div class="sochi__nav-square  sochi__nav-square-l">Площадь м²</div>
                 </div>
-                <div class="level-wrapper">
+                <div class="level-wrapper-sochi">
                 </div>
               </div>
             </div>
@@ -109,26 +110,28 @@
               <h2 class="title-h2" id="m">Дом M</h2>
             </div>
             <div class="sochi">
-              <div class="izometriya none" data-draft="izometriya">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-3.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-2.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-1.png" alt="">
-              </div>
-              <div class="plan" data-draft="plan">
-                <img class="plan-img" src="./assets/images/hotel-sochi/plan-m-1.png" alt="">
-                <img class="plan-img none" src="./assets/images/hotel-sochi/plan-m-1.png" alt="">
-              </div>
-              <div class="square none" data-draft="square">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-2.png" alt="">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-1.png" alt="">
+              <div class="sochi__wrapper">
+                <div class="izometriya" data-m="izometriya">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-m-3.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-m-2.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-m-1.png" alt="">
+                </div>
+                <div class="plan none" data-m="plan">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-m-2.png" alt="">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-m-1.png" alt="">
+                </div>
+                <div class="square none" data-m="square">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-m-2.png" alt="">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-m-1.png" alt="">
+                </div>
               </div>
               <div class="sochi__nav">
                 <div class="sochi__nav-wrapper">
-                  <div class="sochi__nav-izometriya">Аксонометрия</div>
-                  <div class="sochi__nav-plan">План помещения</div>
-                  <div class="sochi__nav-square">Площадь м²</div>
+                  <div class="sochi__nav-izometriya sochi__nav-izometriya-m">Аксонометрия</div>
+                  <div class="sochi__nav-plan sochi__nav-plan-m">План помещения</div>
+                  <div class="sochi__nav-square sochi__nav-square-m">Площадь м²</div>
                 </div>
-                <div class="level-wrapper">
+                <div class="level-wrapper-sochi-m">
                 </div>
               </div>
             </div>
@@ -140,27 +143,29 @@
               <h2 class="title-h2" id="s">Дом S</h2>
             </div>
             <div class="sochi">
-              <div class="izometriya none" data-draft="izometriya">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-3.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-2.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-1.png" alt="">
-              </div>
-              <div class="plan" data-draft="plan">
-                <img class="plan-img" src="./assets/images/hotel-sochi/plan-s-1.png" alt="">
-                <img class="plan-img none" src="./assets/images/hotel-sochi/plan-s-1.png" alt="">
-              </div>
-              <div class="square none" data-draft="square">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-2.png" alt="">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-1.png" alt="">
+              <div class="sochi__wrapper">
+                <div class="izometriya" data-s="izometriya">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-s-3.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-s-2.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-s-1.png" alt="">
+                </div>
+                <div class="plan none" data-s="plan">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-s-2.png" alt="">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-s-1.png" alt="">
+                </div>
+                <div class="square none" data-s="square">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-s-2.png" alt="">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-s-1.png" alt="">
+                </div>
               </div>
               <div class="sochi__nav">
                 <div class="sochi__nav-wrapper">
                   <a href="./sochi-dom-s.html" class="sochi__nav-izometriya">Страница проекта</a>
-                  <div class="sochi__nav-izometriya">Аксонометрия</div>
-                  <div class="sochi__nav-plan">План помещения</div>
-                  <div class="sochi__nav-square">Площадь м²</div>
+                  <div class="sochi__nav-izometriya sochi__nav-izometriya-s">Аксонометрия</div>
+                  <div class="sochi__nav-plan sochi__nav-plan-s">План помещения</div>
+                  <div class="sochi__nav-square sochi__nav-square-s">Площадь м²</div>
                 </div>
-                <div class="level-wrapper">
+                <div class="level-wrapper-sochi-s">
                 </div>
               </div>
             </div>
@@ -171,26 +176,28 @@
               <h2 class="title-h2" id="sss">Дом SSS</h2>
             </div>
             <div class="sochi">
-              <div class="izometriya none" data-draft="izometriya">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-3.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-2.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-1.png" alt="">
-              </div>
-              <div class="plan" data-draft="plan">
-                <img class="plan-img" src="./assets/images/hotel-sochi/plan-sss-1.png" alt="">
-                <img class="plan-img none" src="./assets/images/hotel-sochi/plan-sss-1.png" alt="">
-              </div>
-              <div class="square none" data-draft="square">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-2.png" alt="">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-1.png" alt="">
+              <div class="sochi__wrapper">
+                <div class="izometriya" data-sss="izometriya">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-sss-3.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-sss-2.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-sss-1.png" alt="">
+                </div>
+                <div class="plan none" data-sss="plan">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-sss-2.png" alt="">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-sss-1.png" alt="">
+                </div>
+                <div class="square none" data-sss="square">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-sss-2.png" alt="">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-sss-1.png" alt="">
+                </div>
               </div>
               <div class="sochi__nav">
                 <div class="sochi__nav-wrapper">
-                  <div class="sochi__nav-izometriya">Аксонометрия</div>
-                  <div class="sochi__nav-plan">План помещения</div>
-                  <div class="sochi__nav-square">Площадь м²</div>
+                  <div class="sochi__nav-izometriya sochi__nav-izometriya-sss">Аксонометрия</div>
+                  <div class="sochi__nav-plan sochi__nav-plan-sss">План помещения</div>
+                  <div class="sochi__nav-square sochi__nav-square-sss">Площадь м²</div>
                 </div>
-                <div class="level-wrapper">
+                <div class="level-wrapper-sochi-sss">
                 </div>
               </div>
             </div>
@@ -201,26 +208,28 @@
               <h2 class="title-h2" id="xs">Дом XS</h2>
             </div>
             <div class="sochi">
-              <div class="izometriya none" data-draft="izometriya">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-3.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-2.png" alt="">
-                <img class="izometriya-img" src="./assets/images/sochi-dom-l/izometriya-sochi-dom-l-1.png" alt="">
-              </div>
-              <div class="plan" data-draft="plan">
-                <img class="plan-img" src="./assets/images/hotel-sochi/plan-xs-1.png" alt="">
-                <img class="plan-img none" src="./assets/images/hotel-sochi/plan-xs-1.png" alt="">
-              </div>
-              <div class="square none" data-draft="square">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-2.png" alt="">
-                <img class="square-img" src="./assets/images/sochi-dom-l/square-sochi-dom-l-1.png" alt="">
+              <div class="sochi__wrapper">
+                <div class="izometriya" data-xs="izometriya">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-xs-3.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-xs-2.png" alt="">
+                  <img class="izometriya-img" src="./assets/images/hotel-sochi/izometriya-xs-1.png" alt="">
+                </div>
+                <div class="plan none" data-xs="plan">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-xs-2.png" alt="">
+                  <img class="plan-img" src="./assets/images/hotel-sochi/plan-xs-1.png" alt="">
+                </div>
+                <div class="square none" data-xs="square">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-xs-2.png" alt="">
+                  <img class="square-img" src="./assets/images/hotel-sochi/square-xs-1.png" alt="">
+                </div>
               </div>
               <div class="sochi__nav">
                 <div class="sochi__nav-wrapper">
-                  <div class="sochi__nav-izometriya">Аксонометрия</div>
-                  <div class="sochi__nav-plan">План помещения</div>
-                  <div class="sochi__nav-square">Площадь м²</div>
+                  <div class="sochi__nav-izometriya sochi__nav-izometriya-xs">Аксонометрия</div>
+                  <div class="sochi__nav-plan sochi__nav-plan-xs">План помещения</div>
+                  <div class="sochi__nav-square sochi__nav-square-xs">Площадь м²</div>
                 </div>
-                <div class="level-wrapper">
+                <div class="level-wrapper-sochi-xs">
                 </div>
               </div>
             </div>
