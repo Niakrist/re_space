@@ -1077,7 +1077,7 @@ ul, li {
 }
 
 .plane__img {
-    width: 1196px;
+    max-width: 1196px;
     margin: 0 auto;
 }
 
@@ -1460,7 +1460,7 @@ ul, li {
 .izometriya,
 .plan,
 .square {
-    width: 1196px;
+    max-width: 1196px;
     margin: 0 auto;
 }
 
@@ -1514,6 +1514,14 @@ ul, li {
     justify-content: space-between;
 }
 
+@media (max-width: 991px) {
+    .sochi {
+        flex-direction: column;
+        row-gap: 50px;
+        padding-bottom: 50px;
+    }
+}
+
 .sochi__nav {
     width: 200px;
     display: flex;
@@ -1551,6 +1559,14 @@ ul, li {
 
 .sochi + .linking {
     padding-top: 140px;
+}
+
+.level-wrapper-sochi-xs,
+.level-wrapper-sochi-s,
+.level-wrapper-sochi-sss,
+.level-wrapper-sochi-m,
+.level-wrapper-sochi {
+    max-width: 80px;
 }
 
 .footer {
