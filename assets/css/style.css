@@ -243,6 +243,22 @@ ul, li {
     font-size: 14px;
     line-height: 1.214;
     color: var(--standart-text-color);
+    position: relative;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--standart-text-color);
+    transition: width 0.2s ease;
+}
+
+.nav__link:hover::after {
+    width: 100%;
 }
 
 @media (max-width: 576px) {
@@ -275,11 +291,11 @@ ul, li {
     background-color: var(--bg-color);
     border: 1px solid var(--standart-text-color);
     border-radius: 20px;
-    transition: background-color 0.2s ease-in;
+    transition: background-color 0.1s ease-in;
 }
 
 .button:hover {
-    background-color: var(--button-color);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 700px) {
@@ -469,13 +485,18 @@ ul, li {
     background-color: var(--bg-color);
     border: 1px solid var(--accent-text-color);
     border-radius: 20px;
-    transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in;
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0);
+    transition: background-color 0.1s ease-in, color 0.1s ease-in, border 0.1s ease-in, box-shadow 0.1s ease-in;
 }
 
-.price__nav-privat.active, .price__nav-privat:hover, .price__nav-public.active, .price__nav-public:hover {
-    background-color: var(--button-color);
-    color: var(--standart-text-color);
+.price__nav-privat:hover, .price__nav-public:hover {
     border: 1px solid var(--standart-text-color);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.price__nav-privat.active, .price__nav-public.active {
+    border: 1px solid var(--standart-text-color);
+    color: var(--standart-text-color);
 }
 
 .price__nav-privat {
@@ -682,7 +703,7 @@ ul, li {
     height: 4px;
     border-radius: 50%;
     background-color: var(--standart-text-color);
-    top: 50%;
+    top: 7px;
     left: -15px;
     transform: translateY(-50%);
 }
@@ -759,7 +780,7 @@ ul, li {
     height: 3px;
     border-radius: 50%;
     background-color: var(--standart-text-color);
-    top: 50%;
+    top: 5px;
     left: -10px;
     transform: translateY(-50%);
 }
@@ -798,15 +819,13 @@ ul, li {
 }
 
 .about {
-    font-family: "Raleway";
-    background-color: var(--bg-color);
+    padding-top: 69px;
 }
 
 .about__row {
     display: flex;
     -moz-column-gap: 260px;
     column-gap: 260px;
-    justify-content: space-between;
 }
 
 @media (max-width: 1400px) {
@@ -826,37 +845,31 @@ ul, li {
 }
 
 .about__title {
-    padding: 40px 0 60px;
+    padding-bottom: 15px;
+    font-size: 20px;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 1.25;
+    line-height: 1.15;
     color: var(--standart-text-color);
 }
 
 .about__content {
-    max-width: 334px;
-    height: 590px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 @media (max-width: 991px) {
-    .about__content {
-        max-width: 100%;
-        height: unset;
+    .about__footer {
+        margin: 40px auto 0;
+        text-align: center;
     }
 }
 
-.about__content p {
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 1.1875;
-    color: var(--standart-text-color);
-}
-
-.about__content p span {
-    font-weight: 600;
+.about__footer-soc {
+    margin-top: 30px;
+    display: flex;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
 }
 
 .about__img {
@@ -864,6 +877,28 @@ ul, li {
     width: 100%;
     height: 590px;
     border: 1px solid #D9D9D9;
+}
+
+.content__wrapper {
+    width: 320px;
+}
+
+@media (max-width: 991px) {
+    .content__wrapper {
+        width: 100%;
+        height: unset;
+    }
+}
+
+.content__wrapper p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.1875;
+    color: var(--standart-text-color);
+}
+
+.content__wrapper p span {
+    font-weight: 600;
 }
 
 .project {
@@ -1669,6 +1704,28 @@ ul, li {
     max-width: 80px;
 }
 
+.anim {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+}
+
+path {
+    stroke: black;
+    stroke-width: 2;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+    animation: draw 2s linear infinite;
+}
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 .footer {
     flex: 0 0 auto;
     padding: 50px 0px 50px;
@@ -1699,16 +1756,4 @@ ul, li {
     .footer__soc {
         margin: 30px auto 0;
     }
-}
-
-.footer__svg {
-    fill: #717171;
-}
-
-.footer__svg path {
-    fill: #E6E6E6;
-}
-
-.footer__svg:hover circle {
-    fill: #8888FD;
 }
