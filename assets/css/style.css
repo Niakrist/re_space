@@ -1710,10 +1710,11 @@ ul, li {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 101;
+    pointer-events: none;
 }
 
 path {
-    stroke: black;
+    stroke: blue;
     stroke-width: 2;
     stroke-dasharray: 95;
     stroke-dashoffset: 95;
