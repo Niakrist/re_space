@@ -1753,3 +1753,41 @@ function getSquareXS() {
     })
   })
 }
+const privatePrice = document.querySelectorAll('[data-private]');
+const publicPrice = document.querySelectorAll('[data-public]');
+
+const privateButton = document.querySelector('.price__nav-privat');
+const publicButton = document.querySelector('.price__nav-public');
+
+
+if (privateButton) {
+  privateButton.addEventListener('click', function() {
+    privateButton.classList.add('active');
+    publicButton.classList.remove('active');  
+    
+    for (let privateitem of privatePrice) {
+      privateitem.classList.remove('none');
+    }
+
+    for (let publicItem of publicPrice) {
+      publicItem.classList.add('none');
+    }
+    
+  })
+}
+
+if (publicButton) {
+  publicButton.addEventListener('click', function() {
+
+    privateButton.classList.remove('active');
+    publicButton.classList.add('active');
+
+    for (let privateitem of privatePrice) {
+      privateitem.classList.add('none');
+    }
+
+    for (let publicItem of publicPrice) {
+      publicItem.classList.remove('none');
+    }
+  })
+}
