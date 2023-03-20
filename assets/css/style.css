@@ -91,6 +91,17 @@ body {
     color: var(--standart-text-color);
 }
 
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
 a {
     font-family: inherit;
     text-decoration: none;
@@ -264,6 +275,11 @@ ul, li {
     background-color: var(--bg-color);
     border: 1px solid var(--standart-text-color);
     border-radius: 20px;
+    transition: background-color 0.2s ease-in;
+}
+
+.button:hover {
+    background-color: var(--button-color);
 }
 
 @media (max-width: 700px) {
@@ -409,6 +425,67 @@ ul, li {
     background-color: var(--bg-color);
 }
 
+.price__nav {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+@media (max-width: 575px) {
+    .price__nav {
+        margin-bottom: 20px;
+    }
+}
+
+.price__nav p {
+    font-size: 14px;
+    line-height: 1.142;
+    margin-bottom: 15px;
+}
+
+.price__nav-button-wrapper {
+    display: flex;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    justify-content: center;
+}
+
+@media (max-width: 575px) {
+    .price__nav-button-wrapper {
+        margin: 0 auto;
+        flex-direction: column;
+        -moz-column-gap: 0px;
+        column-gap: 0px;
+        row-gap: 15px;
+        max-width: 200px;
+    }
+}
+
+.price__nav-privat, .price__nav-public {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 0px;
+    letter-spacing: 0.02em;
+    color: var(--accent-text-color);
+    background-color: var(--bg-color);
+    border: 1px solid var(--accent-text-color);
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in;
+}
+
+.price__nav-privat.active, .price__nav-privat:hover, .price__nav-public.active, .price__nav-public:hover {
+    background-color: var(--button-color);
+    color: var(--standart-text-color);
+    border: 1px solid var(--standart-text-color);
+}
+
+.price__nav-privat {
+    padding: 20px 65px 20px 66px;
+}
+
+.price__nav-public {
+    padding: 20px 42px;
+}
+
 .price__title {
     padding: 40px 0 36px;
     font-weight: 700;
@@ -426,66 +503,75 @@ ul, li {
     display: flex;
 }
 
+@media (max-width: 575px) {
+    .price__header {
+        margin-bottom: 10px;
+    }
+}
+
 .price__header-name {
-    width: 60%;
     margin-right: 20px;
+    flex: 1 1 auto;
     font-weight: 700;
     font-size: 25px;
     line-height: 1.16;
     color: var(--standart-text-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__header-name {
-        font-size: 21px;
+        font-size: 19px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .price__header-name {
-        width: 80%;
-        font-size: 16px;
+        font-size: 13px;
+        margin-right: 10px;
     }
 }
 
 .price__header-private {
-    width: 20%;
-    margin-right: 20px;
+    flex: 0 0 200px;
     font-weight: 700;
     font-size: 25px;
     line-height: 1.16;
     color: var(--alternative-text-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__header-private {
-        font-size: 21px;
+        flex: 0 0 150px;
+        font-size: 19px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .price__header-private {
-        font-size: 16px;
+        flex: 0 0 75px;
+        font-size: 13px;
     }
 }
 
 .price__header-public {
-    width: 20%;
+    flex: 0 0 200px;
     font-weight: 700;
     font-size: 25px;
     line-height: 1.16;
     color: var(--alternative-text-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__header-public {
-        font-size: 21px;
+        flex: 0 0 150px;
+        font-size: 19px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .price__header-public {
-        display: none;
+        flex: 0 0 75px;
+        font-size: 13px;
     }
 }
 
@@ -495,29 +581,28 @@ ul, li {
 }
 
 .price__elems-name {
-    width: 60%;
     margin-right: 20px;
+    flex: 1 1 auto;
     font-size: 20px;
     line-height: 1.15;
     color: var(--standart-text-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__elems-name {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .price__elems-name {
-        width: 80%;
-        font-size: 12px;
+        font-size: 13px;
+        margin-right: 10px;
     }
 }
 
 .price__elems-private {
-    width: 20%;
-    margin-right: 20px;
+    flex: 0 0 200px;
     font-family: "Century Gothic";
     font-weight: 400;
     font-size: 20px;
@@ -525,20 +610,22 @@ ul, li {
     color: var(--alternative-text-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__elems-private {
-        font-size: 14px;
+        flex: 0 0 150px;
+        font-size: 15px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .price__elems-private {
-        font-size: 12px;
+        flex: 0 0 75px;
+        font-size: 13px;
     }
 }
 
 .price__elems-public {
-    width: 20%;
+    flex: 0 0 200px;
     font-family: "Century Gothic";
     font-weight: 400;
     font-size: 20px;
@@ -546,15 +633,17 @@ ul, li {
     color: var(--alternative-text-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__elems-public {
-        font-size: 14px;
+        flex: 0 0 150px;
+        font-size: 15px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .price__elems-public {
-        display: none;
+        flex: 0 0 75px;
+        font-size: 13px;
     }
 }
 
@@ -574,9 +663,15 @@ ul, li {
     position: relative;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__li {
-        font-size: 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575px) {
+    .price__li {
+        font-size: 11x;
     }
 }
 
@@ -604,21 +699,21 @@ ul, li {
     color: var(--standart-text-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__term {
-        font-size: 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575px) {
+    .price__term {
+        font-size: 11px;
     }
 }
 
 .price__term span {
     font-weight: 800;
     font-size: 20px;
-}
-
-@media (max-width: 991px) {
-    .price__term span {
-        font-size: 14px;
-    }
 }
 
 .price__grey {
@@ -628,14 +723,26 @@ ul, li {
     color: var(--accent-text-color);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .price__grey {
-        font-size: 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575px) {
+    .price__grey {
+        font-size: 11px;
     }
 }
 
 .price__sub-ul {
     margin: 20px 0;
+}
+
+@media (max-width: 575px) {
+    .price__sub-ul {
+        margin: 10px 0;
+    }
 }
 
 .price__sub-li {
@@ -657,24 +764,10 @@ ul, li {
     transform: translateY(-50%);
 }
 
-.price__show-all {
-    text-align: center;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-    color: var(--standart-text-color);
-    cursor: pointer;
-}
-
-@media (max-width: 991px) {
-    .price__show-all {
-        font-size: 21px;
-    }
-}
-
 .arrow-left {
     display: inline-block;
     padding: 0 10px;
+    pointer-events: none;
 }
 
 .arrow {
@@ -689,16 +782,15 @@ ul, li {
     cursor: pointer;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     .arrow__wrapper {
-        -moz-column-gap: 10px;
-        column-gap: 10px;
+        -moz-column-gap: 5px;
+        column-gap: 5px;
     }
 }
 
 .arrow__wrapper p {
     pointer-events: none;
-    margin-right: 20px;
 }
 
 .arrow__sub-wrapper {
@@ -1370,14 +1462,22 @@ ul, li {
 }
 
 .pop-up button {
-    padding: 22px 45px;
-    margin: 40px auto 0px auto;
+    margin: 30px auto 0;
+    padding: 19px 35px;
     display: block;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 700;
     line-height: 0px;
+    letter-spacing: 0.02em;
+    font-family: "CenturyGothic";
     background-color: var(--bg-color);
     border: 1px solid var(--standart-text-color);
-    border-radius: 10px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in;
+}
+
+.pop-up button:hover {
+    background-color: var(--button-color);
 }
 
 @media (max-width: 576px) {
