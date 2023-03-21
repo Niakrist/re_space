@@ -17,13 +17,15 @@
 
 <body>
     <div class="wrapper">
+        
         <header class="header">
           <div class="container">
-            <div class="anim">
-              
-              <svg width="37" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.044 1v37.461"  stroke-linecap="round"/><path d="M18.045 1L1 10.276l17.045 9.455 17.045-9.455v18.91L18.045 38.46" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            
-            </div>
+            <div class="preloader__scene">
+              <div class="progress">
+                  <svg width="37" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.044 1v37.461"  stroke-linecap="round"/><path d="M18.045 1L1 10.276l17.045 9.455 17.045-9.455v18.91L18.045 38.46" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="preloader__block"></div>
+          </div>   
             <div class="header__nav">
               <a href="./" class="header__logo">
                 <img src="./assets/images/logo.svg" alt="">
@@ -32,13 +34,36 @@
                 <ul class="nav__list">
                   <li class="nav__item"><a href="./about.html" class="nav__link">О нас</a></li>
                   <li class="nav__item"><a href="./price.html" class="nav__link">Прайс</a></li>
-                  <li class="nav__item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
+                  <!-- <li class="nav__item"><a href="./contacts.html" class="nav__link">Контакты</a></li> -->
                   <button class="button" id="open-pop-up">Заказать проект</button>
         
                   <div class="pop-up" id="pop-up">
                     <div class="pop-up__container">
                       <div class="pop-up__body" id="body-pop-up">
-                        <p>Оставить заявку</p>
+                        <div class="contacts">
+                          <p>Вы можете связаться с нами удобным для Вас способом:</p>
+                          <div class="contacts__wrapper">
+                            <div class="contacts__left">
+                              <span>whatsapp:</span>
+                              <span>telegram</span>
+                              <span>почта:</span>
+                              <span>телефон:</span>
+                            </div>
+                            <div class="contacts__right">
+                              <a href="#!">whatsapp</a>
+                              <a href="#!">telegram</a>
+                              <a href="mailto:re_space@gmail.com">re_space@gmail.com</a>
+                              <a href="tel:79523941984">+7(952)394-19-84</a>
+                            </div>
+                          </div>
+                          <p>Рекомендуем предварительно ознакомиться с <a href="./price.html">прайсом</a> на сайте.</p>
+                          <div class="pop-up__close" id="close-pop-up"><img src="./assets/images/close-contacts.svg" alt=""></div>
+                        </div>
+        
+        
+        
+        
+                        <!-- <p>Оставить заявку</p>
                         <form class="js-form-send" method="POST" action="./sendform.php">
                           <input type="text" name="name" placeholder="Имя">
                           <input type="tel" name="tele" placeholder="Телефон">
@@ -46,7 +71,7 @@
                           <textarea name="text" id="" cols="30" rows="5" placeholder="Комментарий"></textarea>
                           <button class="js-form-button">Заказать проект</button>
                           <div class="pop-up__close" id="close-pop-up">&#10006</div>
-                        </form>
+                        </form> -->
                       </div>
                     </div>
                   </div>
@@ -60,12 +85,13 @@
             <section class="project">
               <div class="container-big">
                 <div class="project__img">
-                  <img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-big.jpg" alt="Частный жилой дом в посёлке Мяглово">
-                  
+                  <img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-big.jpg"
+                    alt="Частный жилой дом в посёлке Мяглово">
+            
                   <div class="button-wrapper">
                     <a href="./rajt-park-gostevoj-dom.html" class="button-el">Гостевой дом</a>
                     <a href="./rajt-park-glavnyj-dom.html" class="button-el">Главный дом</a>
-                </div>
+                  </div>
                 </div>
               </div>
             
@@ -77,9 +103,10 @@
                   <p class="project__description">Год: <span>2021-2022</span></p>
                   <p class="project__description">Расположение: <span>Ленинградская область</span></p>
                 </div>
+              </div>
             
-                <!-- SLIDER START -->
-            
+              <!-- SLIDER START -->
+              <div class="container-s">
                 <div class="slider-container">
                   <!-- <div class="slider-top">
                     <div class="slider-buttons"> -->
@@ -89,83 +116,133 @@
                   </div>
                -->
                   <div class="slider">
-            
-            
                     <div class="slider-main">
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-01.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-02.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-03.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-04.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-05.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-06.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-07.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-08.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-09.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-10.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-11.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-12.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-13.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-14.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-15.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-16.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-17.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-18.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-19.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-20.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-21.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-22.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-23.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-24.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-25.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-26.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-27.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-28.jpg" alt=""></div>
-            
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-01.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-02.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-03.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-04.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-05.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-06.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-07.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-08.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-09.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-10.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-11.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-12.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-13.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-14.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-15.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-16.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-17.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-18.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-19.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-20.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-21.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-22.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-23.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-24.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-25.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-26.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-27.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-28.jpg"
+                            alt=""></div>
                       </div>
                     </div>
             
                     <div class="slider-nav">
-            
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-01.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-02.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-03.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-04.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-05.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-06.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-07.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-08.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-09.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-10.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-11.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-12.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-13.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-14.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-15.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-16.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-17.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-18.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-19.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-20.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-21.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-22.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-23.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-24.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-25.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-26.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-27.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-28.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-01.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-02.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-03.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-04.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-05.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-06.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-07.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-08.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-09.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-10.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-11.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-12.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-13.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-14.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-15.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-16.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-17.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-18.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-19.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-20.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-21.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-22.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-23.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-24.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-25.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-26.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-27.jpg"
+                            alt=""></div>
+                        <div class="swiper-slide"><img src="./assets/images/rajt-park-glavnyj-dom/rajt-park-glavnyj-dom-28.jpg"
+                            alt=""></div>
                       </div>
                     </div>
-            
-            
                   </div>
                 </div>
+              </div>
             
             
-            
-                <!-- <div class="slider">
+              <!-- <div class="slider">
             
                   <div class="slider__list">
                     <div class="slider__list-navigation">
@@ -188,11 +265,11 @@
             
                 </div> -->
             
-                <!-- SLIDER END -->
-                    <!-- DRAFT START -->
-            
-                    <div class="draft">
-                      <!-- <div class="izometriya" data-draft="izometriya">
+              <!-- SLIDER END -->
+              <!-- DRAFT START -->
+              <div class="container">
+                <div class="draft">
+                  <!-- <div class="izometriya" data-draft="izometriya">
                           <img class="izometriya-img"
                               src="./assets/images/rajt-park-glavnyj-dom/izometriya-rajt-park-glavnyj-dom-3.png" alt="">
                           <img class="izometriya-img"
@@ -201,27 +278,27 @@
                               src="./assets/images/rajt-park-glavnyj-dom/izometriya-rajt-park-glavnyj-dom-1.png" alt="">
             
                       </div> -->
-                      <div class="plan" data-draft="plan">
-                          <img class="plan-img" src="./assets/images/rajt-park-glavnyj-dom/plan-rajt-park-glavnyj-dom-2.png" alt="">
-                          <img class="plan-img" src="./assets/images/rajt-park-glavnyj-dom/plan-rajt-park-glavnyj-dom-1.png" alt="">
-                      </div>
-                      <div class="square" data-draft="square">
-                          <img class="square-img" src="./assets/images/rajt-park-glavnyj-dom/square-rajt-park-glavnyj-dom-2.png" alt="">
-                          <img class="square-img" src="./assets/images/rajt-park-glavnyj-dom/square-rajt-park-glavnyj-dom-1.png" alt="">
-                      </div>
-            
-                      <div class="draft__nav">
-                          <div class="draft__nav-wrapper">
-                              <!-- <div class="draft__nav-izometriya">Аксонометрия</div> -->
-                              <div class="draft__nav-plan">План помещения</div>
-                              <div class="draft__nav-square">Площадь м²</div>
-                          </div>
-                          <div class="level-wrapper">
-                          </div>
-                      </div>
+                  <div class="plan" data-draft="plan">
+                    <img class="plan-img" src="./assets/images/rajt-park-glavnyj-dom/plan-rajt-park-glavnyj-dom-2.png" alt="">
+                    <img class="plan-img" src="./assets/images/rajt-park-glavnyj-dom/plan-rajt-park-glavnyj-dom-1.png" alt="">
+                  </div>
+                  <div class="square" data-draft="square">
+                    <img class="square-img" src="./assets/images/rajt-park-glavnyj-dom/square-rajt-park-glavnyj-dom-2.png" alt="">
+                    <img class="square-img" src="./assets/images/rajt-park-glavnyj-dom/square-rajt-park-glavnyj-dom-1.png" alt="">
                   </div>
             
-                  <!-- DRAFT END -->
+                  <div class="draft__nav">
+                    <div class="draft__nav-wrapper">
+                      <!-- <div class="draft__nav-izometriya">Аксонометрия</div> -->
+                      <div class="draft__nav-plan">План помещения</div>
+                      <div class="draft__nav-square">Площадь м²</div>
+                    </div>
+                    <div class="level-wrapper">
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- DRAFT END -->
             
                 <div class="linking">
                   <a href="./apartamenty-ariosto.html" class="linking__prev">
@@ -241,7 +318,6 @@
                       <path d="M1 1l5.98 5.98M1 1l5.98 5.98M1 1l5.98 5.98M1 12.97l5.98-5.98M1 12.97l5.98-5.98M1 12.97l5.98-5.98"
                         stroke-linecap="round" />
                     </svg></a>
-            
                 </div>
               </div>
             
