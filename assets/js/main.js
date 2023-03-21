@@ -264,6 +264,7 @@ let mySwiperNav = new Swiper(sliderNav, {
 let mySwiper = new Swiper(slider, {
   spaceBetween: 10,
   loop: true,
+
   // loopedSlides: 3,
   navigation: {
     prevEl: '.swiper-button-prev',
@@ -297,7 +298,7 @@ closePopUp.addEventListener('click', function() {
 
 popUp.addEventListener('click', function(e) {
   if (!e.target.closest('.pop-up__body')) {
-    popUp.classList.remove('active-pop-up'); 
+    popUp.classList.remove('active-pop-up');
   }
 })
 const izometriyaBtn = document.querySelector('.draft__nav-izometriya');
