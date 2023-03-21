@@ -264,6 +264,12 @@ let mySwiperNav = new Swiper(sliderNav, {
 let mySwiper = new Swiper(slider, {
   spaceBetween: 10,
   loop: true,
+  slideToClickedSlide: true,
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
 
   // loopedSlides: 3,
   navigation: {
