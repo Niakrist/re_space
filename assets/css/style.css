@@ -153,6 +153,18 @@ ul, li {
     margin: 0 auto;
 }
 
+.container-s {
+    max-width: var(--container-standart);
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .container-s {
+        padding: 0 0px;
+    }
+}
+
 .line {
     max-width: 1620px;
     height: 1px;
@@ -253,7 +265,7 @@ ul, li {
     bottom: -1px;
     width: 0%;
     height: 2px;
-    background-color: var(--standart-text-color);
+    background-color: var(--alternative-text-color);
     transition: width 0.2s ease;
 }
 
@@ -624,7 +636,7 @@ ul, li {
 
 .price__elems-private {
     flex: 0 0 200px;
-    font-family: "Century Gothic";
+    font-family: "CenturyGothic";
     font-weight: 400;
     font-size: 20px;
     line-height: 1.25;
@@ -647,7 +659,7 @@ ul, li {
 
 .price__elems-public {
     flex: 0 0 200px;
-    font-family: "Century Gothic";
+    font-family: "CenturyGothic";
     font-weight: 400;
     font-size: 20px;
     line-height: 1.25;
@@ -934,10 +946,10 @@ ul, li {
 }
 
 .project__img .button-wrapper .button-el {
-    padding: 9px 19px;
-    font-family: "Century Gothic";
+    padding: 15px 30px;
+    font-family: "CenturyGothic";
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1;
     color: var(--standart-text-color);
     background-color: var(--button-color);
@@ -947,6 +959,7 @@ ul, li {
 
 @media (max-width: 767px) {
     .project__img .button-wrapper .button-el {
+        font-size: 12px;
         padding: 7px 10px;
     }
 }
@@ -1036,7 +1049,6 @@ ul, li {
 
 .slider {
     display: flex;
-    max-width: 1608px;
     -moz-column-gap: 30px;
     column-gap: 30px;
     padding: 0 50px;
@@ -1044,39 +1056,15 @@ ul, li {
 
 @media (max-width: 991px) {
     .slider {
-        padding: unset;
+        padding: 0 0px;
     }
 }
 
 .slider-container {
     margin-bottom: 145px;
-    max-height: 840px;
+    height: auto;
     overflow: hidden;
     position: relative;
-}
-
-@media (max-width: 1400px) {
-    .slider-container {
-        max-height: 700px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .slider-container {
-        max-height: 600px;
-    }
-}
-
-@media (max-width: 991px) {
-    .slider-container {
-        margin-bottom: 75px;
-    }
-}
-
-@media (max-width: 767px) {
-    .slider-container {
-        margin-bottom: 30px;
-    }
 }
 
 .slider-nav {
@@ -1109,36 +1097,6 @@ ul, li {
 .slider-main {
     overflow: hidden;
     max-height: 840px;
-}
-
-@media (max-width: 1400px) {
-    .slider-main {
-        max-height: 700px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .slider-main {
-        max-height: 600px;
-    }
-}
-
-@media (max-width: 767px) {
-    .slider-main {
-        max-height: 500px;
-    }
-}
-
-@media (max-width: 575px) {
-    .slider-main {
-        max-height: 365px;
-    }
-}
-
-@media (max-width: 400px) {
-    .slider-main {
-        max-height: 245px;
-    }
 }
 
 .slider-main .swiper-slide img {
@@ -1198,7 +1156,7 @@ ul, li {
 
 @media (max-width: 991px) {
     .plane {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding-bottom: 30px;
     }
 }
@@ -1242,7 +1200,7 @@ ul, li {
 
 .plane__nav {
     width: 185px;
-    font-family: "Century Gothic";
+    font-family: "CenturyGothic";
     font-weight: 700;
     font-size: 16px;
     line-height: 1.25;
@@ -1251,22 +1209,8 @@ ul, li {
 
 @media (max-width: 991px) {
     .plane__nav {
-        margin-bottom: 30px;
+        margin: 30px 0;
         width: unset;
-        display: flex;
-        -moz-column-gap: 30px;
-        column-gap: 30px;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 500px) {
-    .plane__nav {
-        font-size: 14px;
-        font-weight: 500;
-        text-align: center;
-        -moz-column-gap: 15px;
-        column-gap: 15px;
     }
 }
 
@@ -1303,7 +1247,7 @@ ul, li {
 }
 
 .linking a {
-    font-family: "Century Gothic";
+    font-family: "CenturyGothic";
     font-weight: 700;
     font-size: 16px;
     line-height: 1.25;
@@ -1342,16 +1286,9 @@ ul, li {
 }
 
 .contacts {
+    margin: 20px 10px;
     background-color: var(--bg-color);
     font-family: "Raleway";
-}
-
-.contacts__title {
-    padding: 40px 0 60px;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 1.25;
-    color: var(--standart-text-color);
 }
 
 .contacts p {
@@ -1359,6 +1296,12 @@ ul, li {
     font-weight: 500;
     line-height: 1.16;
     color: #000000;
+}
+
+@media (max-width: 576px) {
+    .contacts p {
+        font-size: 20px;
+    }
 }
 
 .contacts p a {
@@ -1385,16 +1328,18 @@ ul, li {
     font-size: 14px;
 }
 
-.contacts__wrapper a:hover {
-    text-decoration: underline;
+@media (max-width: 575px) {
+    .contacts__wrapper {
+        padding: 20px 0;
+        justify-content: center;
+        margin-left: 0px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+    }
 }
 
-@media (max-width: 576px) {
-    .contacts__wrapper {
-        justify-content: center;
-        -moz-column-gap: 50px;
-        column-gap: 50px;
-    }
+.contacts__wrapper a:hover {
+    text-decoration: underline;
 }
 
 .contacts__left {
@@ -1434,107 +1379,32 @@ ul, li {
 
 .pop-up__body {
     margin: auto;
-    width: 500px;
+    width: 90%;
+    height: 80%;
     background-color: var(--bg-color);
     border-radius: 10px;
-    text-align: center;
-    padding: 50px 10px 50px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-}
-
-@media (max-width: 576px) {
-    .pop-up__body {
-        width: 300px;
-        padding: 25px 10px 10px 10px;
-    }
-}
-
-.pop-up__body p {
-    font-size: 28px;
-    color: var(--standart-text-color);
-    margin-bottom: 40px;
-}
-
-@media (max-width: 576px) {
-    .pop-up__body p {
-        margin-bottom: 20px;
-    }
-}
-
-.pop-up__body textarea, .pop-up__body input {
-    width: 330px;
-    margin: 25px auto 0px auto;
-    padding: 17px 20px;
-    font-size: 18px;
-    color: --standart-text-color;
-    display: block;
-    border-radius: 10px;
-    border: none;
-}
-
-@media (max-width: 576px) {
-    .pop-up__body textarea, .pop-up__body input {
-        width: 240px;
-        margin: 15px auto 0px auto;
-        padding: 10px 15px;
-    }
-}
-
-.pop-up__body textarea::-moz-placeholder, .pop-up__body input::-moz-placeholder {
-    font-size: 15px;
-    font-family: "Raleway";
-    color: var(--accent-text-color);
-}
-
-.pop-up__body textarea::placeholder, .pop-up__body input::placeholder {
-    font-size: 15px;
-    font-family: "Raleway";
-    color: var(--accent-text-color);
-}
-
-.pop-up__body textarea:focus, .pop-up__body input:focus {
-    outline: 1px solid var(--hover-text-color);
-}
-
-.pop-up button {
-    margin: 30px auto 0;
-    padding: 19px 35px;
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 0px;
-    letter-spacing: 0.02em;
-    font-family: "CenturyGothic";
-    background-color: var(--bg-color);
-    border: 1px solid var(--standart-text-color);
-    border-radius: 20px;
-    transition: background-color 0.2s ease-in;
-}
-
-.pop-up button:hover {
-    background-color: var(--button-color);
-}
-
-@media (max-width: 576px) {
-    .pop-up button {
-        margin: 20px auto 0px auto;
-    }
 }
 
 .pop-up__close {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 22px;
+    top: 30px;
+    right: 40px;
     cursor: pointer;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     .pop-up__close {
-        top: 10px;
-        right: 10px;
-        font-size: 18px;
+        top: 15px;
+        right: 20px;
     }
+}
+
+.active-pop-up {
+    display: flex;
 }
 
 .draft {
@@ -1562,7 +1432,7 @@ ul, li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "Century Gothic";
+    font-family: "CenturyGothic";
     font-weight: 700;
     font-size: 16px;
     line-height: 140%;
@@ -1662,7 +1532,7 @@ ul, li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: "Century Gothic";
+    font-family: "CenturyGothic";
     font-weight: 700;
     font-size: 16px;
     line-height: 140%;
@@ -1704,26 +1574,56 @@ ul, li {
     max-width: 80px;
 }
 
-.anim {
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.preloader__scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.preloader__block {
+    width: 100%;
+    background-color: #fff;
+    animation: preloader 1s linear forwards;
+    animation-delay: 1s;
+}
+
+.progress {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 101;
+    z-index: 1001;
+    stroke: #000;
+    stroke-width: 2;
+    stroke-dasharray: 97;
+    stroke-dashoffset: 97;
+    animation: draw 2s linear;
     pointer-events: none;
 }
 
-path {
-    stroke: blue;
-    stroke-width: 2;
-    stroke-dasharray: 95;
-    stroke-dashoffset: 95;
-    animation: draw 2s linear infinite;
-}
+@keyframes preloader {
+    0% {
+        opacity: 1;
+    }
 
-@keyframes draw {
+    90% {
+        opacity: 0.8;
+    }
+
     100% {
-        stroke-dashoffset: 0;
+        opacity: 0;
     }
 }
 
