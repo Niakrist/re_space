@@ -266,6 +266,7 @@ let mySwiper = new Swiper(slider, {
   loop: true,
   slideToClickedSlide: true,
   grabCursor: true,
+  autoHeight:true,  
   keyboard: {
     enabled: true,
     onlyInViewport: false,
