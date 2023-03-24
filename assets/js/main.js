@@ -282,12 +282,6 @@ let mySwiper = new Swiper(slider, {
   }
 
 });
-const btnMenu = document.querySelector('.btn__menu');
-const navList = document.querySelector('.nav__list');
-
-btnMenu.addEventListener('click', function() {
-  navList.classList.toggle('nav__menu-mob--active');
-})
 const openPopUp = document.getElementById('open-pop-up');
 const closePopUp =document.getElementById('close-pop-up');
 const popUp = document.getElementById('pop-up');
@@ -1799,3 +1793,11 @@ if (publicButton) {
     }
   })
 }
+const burger = document.querySelector('.burger');
+const navList = document.querySelector('.nav__list');
+
+burger.addEventListener('click', function() {
+  console.log('click')
+  navList.classList.toggle('nav__menu-mob--active');
+  burger.classList.toggle('active')
+})
