@@ -235,16 +235,20 @@ ul, li {
 @media (max-width: 576px) {
     .nav__list {
         display: none;
+        flex-direction: column;
+        -moz-column-gap: 0;
+        column-gap: 0;
+        row-gap: 60px;
         position: fixed;
-        padding-top: 50px;
         top: 0;
         left: 0;
-        right: 0;
         bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        padding-top: 100px;
+        overflow: hidden;
         background-color: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        -moz-column-gap: 54px;
-        column-gap: 54px;
         align-items: center;
         z-index: 14;
     }
@@ -276,20 +280,13 @@ ul, li {
 @media (max-width: 576px) {
     .nav__link {
         font-family: "CenturyGothic";
-        margin-top: 20px;
-        font-size: 20px;
+        font-size: 28px;
         color: #fff;
     }
 }
 
 .nav__menu-mob--active {
     display: flex;
-}
-
-.button-mob,
-.btn__menu {
-    position: relative;
-    z-index: 100;
 }
 
 .button {
@@ -303,7 +300,7 @@ ul, li {
     background-color: var(--bg-color);
     border: 1px solid var(--standart-text-color);
     border-radius: 20px;
-    transition: background-color 0.1s ease-in;
+    transition: box-shadow 0.1s ease-in;
 }
 
 .button:hover {
@@ -316,48 +313,14 @@ ul, li {
     }
 }
 
-.button-mob {
-    display: none;
-    padding: 12px 2px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
 @media (max-width: 576px) {
-    .button-mob {
-        display: block;
+    .button {
+        padding: 30px 35px;
+        font-size: 24px;
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
     }
-}
-
-.button-mob span {
-    width: 30px;
-    height: 2px;
-    display: block;
-    background-color: var(--accent-text-color);
-    position: relative;
-}
-
-.button-mob span::before {
-    content: "";
-    position: absolute;
-    top: -7px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    display: block;
-    background-color: var(--accent-text-color);
-}
-
-.button-mob span::after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    display: block;
-    background-color: var(--accent-text-color);
 }
 
 .swiper-button-prev,
@@ -887,8 +850,11 @@ ul, li {
 .about__img {
     margin-top: 40px;
     width: 100%;
-    height: 590px;
-    border: 1px solid #D9D9D9;
+}
+
+.about__img img {
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 
 .content__wrapper {
@@ -955,6 +921,10 @@ ul, li {
     background-color: var(--button-color);
     border: none;
     outline: none;
+}
+
+.project__img .button-wrapper .button-el:hover {
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 767px) {
@@ -1609,7 +1579,7 @@ ul, li {
     stroke-width: 2;
     stroke-dasharray: 97;
     stroke-dashoffset: 97;
-    animation: draw 2s linear;
+    animation: draw 1s linear;
     pointer-events: none;
 }
 
@@ -1624,6 +1594,67 @@ ul, li {
 
     100% {
         opacity: 0;
+    }
+}
+
+.burger {
+    padding: 0px;
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.burger span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: var(--standart-text-color);
+}
+
+.burger::before, .burger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--standart-text-color);
+    transition: transform 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+
+.burger::before {
+    top: 0;
+}
+
+.burger::after {
+    bottom: 0;
+}
+
+.burger.active span {
+    transform: scale(0);
+    background-color: var(--bg-color);
+}
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+    background-color: var(--bg-color);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+    background-color: var(--bg-color);
+}
+
+@media (max-width: 576px) {
+    .burger {
+        display: flex;
     }
 }
 
